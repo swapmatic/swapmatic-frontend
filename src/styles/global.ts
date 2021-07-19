@@ -13,7 +13,7 @@ export default createGlobalStyle`
   }
 
   :root {
-    // Colors
+    // Colors ------------------------------------------------
     --color-primary: #2891F9;
     --color-secundary: #153A71;
     --color-gray-500: #C2C2C2;
@@ -33,13 +33,8 @@ export default createGlobalStyle`
     --color-warning: #D89F49;
     --color-success: #47D66F;
 
-    // Text Colors
-    --color-text-white: #FFFFFF;
-    --color-text-black: #333333;
-    --color-text-gray: #bbbcbc;
-
-    // Sizes
-    --max-width: 1200px;
+    // Sizes ------------------------------------------------
+    --max-width: 1000px;
     --border-radius: 0.31rem;
   }
 
