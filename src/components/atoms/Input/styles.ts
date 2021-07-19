@@ -26,11 +26,12 @@ export const Label = styled.label<IStyledInputProps>`
   transform: translateY(-50%);
   left: 0.5rem;
   transition: all 0.5s;
+  color: var(--color-white);
   ${props => props.isActive && LabelIsActive}
 `
 
 export const Content = styled.div<IStyledInputProps>`
-  background: #666;
+  background: var(--color-gray-700);
   position: relative;
   width: 10rem;
   border-radius: var(--border-radius);
