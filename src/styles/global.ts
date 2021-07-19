@@ -27,6 +27,7 @@ export default createGlobalStyle`
 
     // Sizes
     --max-width: 1200px;
+    --border-radius: 0.31rem;
   }
 
   body {
