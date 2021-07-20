@@ -4,8 +4,10 @@ import Button from '@/components/atoms/Button'
 
 export default function Home() {
   return (
-    <Button sizeVariant="medium" colorVariant="primary">
-      connect wallet
-    </Button>
+    <a href="#">
+      <Button colorVariant="primary" sizeVariant="medium">
+        connect wallet
+      </Button>
+    </a>
   )
 }
