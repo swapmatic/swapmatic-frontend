@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 3.5rem;
+  width: 100%;
   display: flex;
+  position: fixed;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
 `
