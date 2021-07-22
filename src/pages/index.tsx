@@ -1,6 +1,6 @@
 // Components
 // import HomeView from '@/components/templates/Home'
-import Logo from '@/components/atoms/Logo'
+import Typography from '@/components/atoms/Typography'
 export default function Home() {
-  return <Logo type="logo" />
+  return <Typography as="body4">Oi</Typography>
 }

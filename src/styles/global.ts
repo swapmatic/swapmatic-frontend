@@ -37,23 +37,6 @@ export default createGlobalStyle`
     --max-width: 1000px;
     --border-radius: 0.31rem;
 
-    // Text Sizes
-    --text-size-heading-1: 2.25rem;
-    --text-size-heading-2: 1.5rem;
-    --text-size-heading-3: 1.125rem;
-    --text-size-body-1: 0.81rem;
-    --text-size-body-2: 0.81rem;
-    --text-size-body-3: 0.63rem;
-    --text-size-body-4: 0.63rem;
-
-    // Text Weight
-    --text-weight-heading-1: 700;
-    --text-weight-heading-2: 700;
-    --text-weight-heading-3: 700;
-    --text-weight-body-1: 700;
-    --text-weight-body-2: 400;
-    --text-weight-body-3: 700;
-    --text-weight-body-4: 400;
   }
 
   body {
