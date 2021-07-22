@@ -1,23 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-// Types
-import { IAnchorProps } from './index'
+export const Container = styled.a`
+  transition: all 0.5s;
 
-// Styles
-const colorsVariants = {
-  black: css`
-    color: var(--color-black);
-  `,
-  white: css`
-    color: var(--color-white);
-  `,
-  primary: css`
-    color: var(--color-primary);
-  `
-}
-
-export const Container = styled.a<IAnchorProps>`
-  font-size: var(--text-size-body-2);
-  font-weight: var(--text-weight-body-2);
-  ${props => colorsVariants[props.colorVariant]}
+  &:hover {
+    filter: brightness(0.8);
+  }
 `

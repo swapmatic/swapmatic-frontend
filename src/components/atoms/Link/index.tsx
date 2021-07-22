@@ -11,16 +11,11 @@ import * as Styled from './styles'
 // Services
 
 // Types
-export interface ILinkProps extends LinkProps {
-  colorVariant: 'white' | 'black' | 'primary'
-}
 
-const Link: React.FC<ILinkProps> = ({ children, colorVariant, ...rest }) => {
+const Link: React.FC<LinkProps> = ({ children, ...rest }) => {
   return (
     <NextLink {...rest}>
-      <Styled.Container colorVariant={colorVariant}>
-        {children}
-      </Styled.Container>
+      <Styled.Container>{children}</Styled.Container>
     </NextLink>
   )
 }

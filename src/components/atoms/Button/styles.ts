@@ -5,7 +5,15 @@ import { pulseRad } from '@/styles/animations'
 
 // Types
 import { IButtonProps } from './index'
-type IContainerProps = Pick<IButtonProps, 'colorVariant' | 'sizeVariant'>
+type IContainerProps = Pick<
+  IButtonProps,
+  | 'colorVariant'
+  | 'sizeVariant'
+  | 'marginLeft'
+  | 'marginTop'
+  | 'marginRight'
+  | 'marginBottom'
+>
 
 const colorsVariants = {
   primary: css`
@@ -32,16 +40,16 @@ const colorsVariants = {
 
 const sizesVariants = {
   small: css`
-    height: 1.56rem;
+    height: 1.8rem;
     width: 7.5rem;
-    font-size: var(--text-size-body-3);
-    font-weight: var(--text-weight-body-3);
+    font-size: 0.8rem;
+    font-weight: 700;
   `,
   medium: css`
     height: 2.5rem;
     width: 9.38rem;
-    font-size: var(--text-size-body-1);
-    font-weight: var(--text-weight-body-1);
+    font-size: 0.9rem;
+    font-weight: 700;
   `
 }
 
@@ -51,6 +59,10 @@ export const Container = styled.button<IContainerProps>`
   border-radius: var(--border-radius);
   text-transform: capitalize;
   transition: all 0.5s;
+  margin-left: ${props => props.marginLeft || '0'};
+  margin-top: ${props => props.marginTop || '0'};
+  margin-right: ${props => props.marginRight || '0'};
+  margin-bottom: ${props => props.marginBottom || '0'};
   ${props => colorsVariants[props.colorVariant]};
   ${props => sizesVariants[props.sizeVariant]};
   &:hover {

@@ -11,9 +11,7 @@ import * as Styled from './styles'
 // Services
 
 // Types
-export interface IAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  colorVariant: 'black' | 'white' | 'primary'
-}
+export interface IAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 
 const Anchor: React.FC<IAnchorProps> = ({ children, ...rest }) => {
   return <Styled.Container {...rest}>{children}</Styled.Container>

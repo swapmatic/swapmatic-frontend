@@ -12,6 +12,7 @@ export const parsedTypographys = {
     style: css`
       font-size: 2.25rem;
       font-weight: 700;
+      letter-spacing: 0.05em;
     `
   },
   heading2: {
@@ -19,6 +20,7 @@ export const parsedTypographys = {
     style: css`
       font-size: 1.5rem;
       font-weight: 700;
+      letter-spacing: 0.05em;
     `
   },
   heading3: {
@@ -26,36 +28,39 @@ export const parsedTypographys = {
     style: css`
       font-size: 1.125rem;
       font-weight: 700;
+      letter-spacing: 0.05em;
     `
   },
   body1: {
     tag: 'span',
     style: css`
-      font-size: 0.81rem;
+      font-size: 0.9rem;
       font-weight: 700;
+      letter-spacing: 0.05em;
     `
   },
   body2: {
     tag: 'span',
     style: css`
-      font-size: 0.81rem;
+      font-size: 0.9rem;
       font-weight: 400;
-      color: red;
+      letter-spacing: 0.05em;
     `
   },
   body3: {
     tag: 'span',
     style: css`
-      font-size: 0.63rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      color: blue;
+      letter-spacing: 0.05em;
     `
   },
   body4: {
     tag: 'span',
     style: css`
-      font-size: 0.63rem;
+      font-size: 0.8rem;
       font-weight: 400;
+      letter-spacing: 0.05em;
     `
   },
   div: {

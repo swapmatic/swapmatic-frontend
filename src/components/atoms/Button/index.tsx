@@ -14,6 +14,10 @@ import * as Styled from './styles'
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   sizeVariant: 'small' | 'medium'
   colorVariant: 'primary' | 'primaryReverse' | 'white' | 'whiteReverse'
+  marginLeft?: string
+  marginTop?: string
+  marginRight?: string
+  marginBottom?: string
 }
 
 const Button: React.FC<IButtonProps> = ({ children, ...rest }) => {

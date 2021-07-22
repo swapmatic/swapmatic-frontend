@@ -3,6 +3,7 @@
 // Assets
 
 // Componentes
+import Header from '@/components/organisms/Header'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -12,7 +13,11 @@ import * as Styled from './styles'
 // Types
 
 const Home: React.FC = () => {
-  return <Styled.Container>Home Content</Styled.Container>
+  return (
+    <Styled.Container>
+      <Header />
+    </Styled.Container>
+  )
 }
 
 export default Home
