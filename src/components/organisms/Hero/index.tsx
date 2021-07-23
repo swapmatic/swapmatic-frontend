@@ -1,6 +1,8 @@
 // External libs
+import Image from 'next/image'
 
 // Assets
+import HeroImg from '../../../assets/imgs/hero.webp'
 
 // Componentes
 import Wrapper from '@/components/atoms/Wrapper'
