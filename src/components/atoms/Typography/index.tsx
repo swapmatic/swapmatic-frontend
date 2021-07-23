@@ -4,6 +4,11 @@ import * as Styled from './styles'
 // Types
 export interface ITypographyProps {
   as: keyof typeof Styled.parsedTypographys
+  color?: string
+  marginLeft?: string
+  marginTop?: string
+  marginRight?: string
+  marginBottom?: string
 }
 
 const Typography: React.FC<ITypographyProps> = ({ children, ...rest }) => {
