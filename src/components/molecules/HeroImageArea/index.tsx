@@ -2,9 +2,11 @@
 
 // Assets
 import HeroImg from '../../../assets/imgs/hero.webp'
+import RadBigSvg from '../../../assets/svgs/rad_big.svg'
 
 // Componentes
 import ImageAbsolute from '@/components/atoms/ImageAbsolute'
+import SvgAbsolute from '@/components/atoms/SvgAbsolute'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -16,14 +18,29 @@ import * as Styled from './styles'
 const HeroImageArea: React.FC = () => {
   return (
     <Styled.Container>
-      <ImageAbsolute
-        image={{ src: HeroImg, alt: 'Swapmatic Hero' }}
-        position={{
-          right: '0',
-          width: 343,
-          height: 505
-        }}
-      />
+      <Styled.RadHero>
+        <SvgAbsolute
+          src={RadBigSvg}
+          position={{
+            left: '50%',
+            translation: { x: '-55%', y: '-67%' },
+            zIndex: -1
+          }}
+        />
+        <ImageAbsolute
+          image={{
+            src: HeroImg,
+            alt: 'Swapmatic Hero',
+            width: 343,
+            height: 505
+          }}
+          position={{
+            left: '50%',
+            translation: { x: '65%', y: '-50%' },
+            zIndex: -1
+          }}
+        />
+      </Styled.RadHero>
     </Styled.Container>
   )
 }

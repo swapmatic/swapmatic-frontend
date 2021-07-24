@@ -4,5 +4,10 @@ export const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+`
+
+export const RadHero = styled.div`
+  position: absolute;
+  top: 50%;
+  right: 100%;
 `
