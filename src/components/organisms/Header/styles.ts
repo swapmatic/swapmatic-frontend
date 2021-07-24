@@ -7,6 +7,7 @@ export const Container = styled.div`
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
+  z-index: 1;
 `
 
 export const Content = styled.div`

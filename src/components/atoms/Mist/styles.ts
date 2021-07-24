@@ -22,4 +22,6 @@ export const Container = styled.div<IMistProps>`
   right: ${props => props.right || 'inherit'};
   bottom: ${props => props.bottom || 'inherit'};
   left: ${props => props.left || 'inherit'};
+
+  pointer-events: none;
 `

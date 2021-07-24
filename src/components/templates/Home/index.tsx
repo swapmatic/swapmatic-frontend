@@ -5,7 +5,6 @@
 // Componentes
 import Header from '@/components/organisms/Header'
 import Hero from '@/components/organisms/Hero'
-import Mist from '@/components/atoms/Mist'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -19,7 +18,6 @@ const Home: React.FC = () => {
     <Styled.Container>
       <Header />
       <Hero />
-      <Mist top="0" left="30%" />
     </Styled.Container>
   )
 }

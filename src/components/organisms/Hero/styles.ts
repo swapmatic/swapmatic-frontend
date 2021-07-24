@@ -7,6 +7,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: grid;
+  position: relative;
   grid-template-columns: auto 1fr;
   align-items: center;
   height: calc(100vh - 3.5rem);
