@@ -22,8 +22,8 @@ const HeroImageArea: React.FC = () => {
         <SvgAbsolute
           src={RadBigSvg}
           position={{
-            left: '50%',
-            translation: { x: '-55%', y: '-67%' },
+            right: '0',
+            translation: { x: '-3%', y: '-67%' },
             zIndex: -1
           }}
         />
@@ -35,8 +35,8 @@ const HeroImageArea: React.FC = () => {
             height: 505
           }}
           position={{
-            left: '50%',
-            translation: { x: '65%', y: '-50%' },
+            right: '0',
+            translation: { x: '-50%', y: '-50%' },
             zIndex: -1
           }}
         />
