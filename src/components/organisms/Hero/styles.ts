@@ -6,7 +6,8 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   height: calc(100vh - 3.5rem);
   padding: 0 1rem;

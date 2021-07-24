@@ -1,12 +1,11 @@
 // External libs
-import Image from 'next/image'
 
 // Assets
-import HeroImg from '../../../assets/imgs/hero.webp'
 
 // Componentes
 import Wrapper from '@/components/atoms/Wrapper'
 import HeroTextArea from '@/components/molecules/HeroTextArea'
+import HeroImageArea from '@/components/molecules/HeroImageArea'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -21,6 +20,7 @@ const Hero: React.FC = () => {
       <Wrapper>
         <Styled.Content>
           <HeroTextArea />
+          <HeroImageArea />
         </Styled.Content>
       </Wrapper>
     </Styled.Container>
