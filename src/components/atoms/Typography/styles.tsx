@@ -76,6 +76,7 @@ export const Container = styled('div').attrs<ITypographyProps>(
   })
 )<IContainerProps>`
   ${props => props.styles};
+  text-align: ${props => props.align || 'inherit'};
   color: ${props => props.color || 'var(--color-white)'};
   margin-left: ${props => props.marginLeft || '0'};
   margin-top: ${props => props.marginTop || '0'};

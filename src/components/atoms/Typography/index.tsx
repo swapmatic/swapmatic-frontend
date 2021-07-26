@@ -9,6 +9,7 @@ export interface ITypographyProps {
   marginTop?: string
   marginRight?: string
   marginBottom?: string
+  align?: string
 }
 
 const Typography: React.FC<ITypographyProps> = ({ children, ...rest }) => {
