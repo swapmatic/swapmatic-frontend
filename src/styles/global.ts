@@ -13,24 +13,35 @@ export default createGlobalStyle`
   }
 
   :root {
-    // Colors
-    --color-primary: #722456;
-    --color-gray-500: #d0d0ce;
+    // Colors ------------------------------------------------
+    --color-primary: #2891F9;
+    --color-secundary: #153A71;
+    --color-gray-500: #C2C2C2;
+    --color-gray-700: #666666;
+    --color-gray-800: #313A42;
     --color-black: #000000;
     --color-white: #FFFFFF;
-    --color-blue: #00ACED;
 
-    // Text Colors
-    --color-text-white: #FFFFFF;
-    --color-text-black: #333333;
-    --color-text-gray: #bbbcbc;
+    // Footer Gradient Colors
+    --color-gradient-1: #E5F0FF;
+    --color-gradient-2: #DEE8F7;
+    --color-gradient-3: #D7E0ED;
+    --color-gradient-4: #CCD5E1;
 
-    // Sizes
-    --max-width: 1200px;
+    // Alert Colors
+    --color-danger: #EA5050;
+    --color-warning: #D89F49;
+    --color-success: #47D66F;
+
+    // Sizes ------------------------------------------------
+    --max-width: 1000px;
+    --border-radius: 0.31rem;
+
   }
 
   body {
     background-color: #000;
+    overflow-x: hidden;
   }
 
   body, button, textarea, input {
@@ -41,7 +52,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  button {
+  button, a {
     cursor: pointer;
   }
 
