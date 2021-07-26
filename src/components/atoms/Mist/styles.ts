@@ -4,10 +4,9 @@ import { IMistProps } from './index'
 
 export const Container = styled.div<IMistProps>`
   position: absolute;
-  display: unset;
 
-  width: 884.93px;
-  height: 884.93px;
+  width: 100%;
+  height: 100%;
 
   background: linear-gradient(
     180deg,

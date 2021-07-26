@@ -12,8 +12,6 @@ export const Container = styled.div<IPosition>`
     ${props => props.translation?.x || 'inherit'},
     ${props => props.translation?.y || 'inherit'}
   );
-  width: ${props => `${props.width}px` || 'inherit'};
-  height: ${props => `${props.height}px` || 'inherit'};
   z-index: ${props => props.zIndex || -1};
   pointer-events: none;
 `
