@@ -17,6 +17,7 @@ export interface ITransientShadowProps {
   right?: string
   bottom?: string
   left?: string
+  position: 'bottom' | 'top'
 }
 
 const TransientShadow: React.FC<ITransientShadowProps> = ({ ...rest }) => {

@@ -9,6 +9,7 @@ import Wrapper from '@/components/atoms/Wrapper'
 import HeroTextArea from '@/components/molecules/HeroTextArea'
 import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 import Mist from '@/components/atoms/Mist'
+import TransientShadow from '@/components/atoms/TransientShadow'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -43,6 +44,7 @@ const Hero: React.FC = () => {
           <CircleAbsolute size="54px" top="50%" left="40%" />
         </Styled.Content>
       </Wrapper>
+      <TransientShadow position="bottom" bottom="0" height="5rem" />
     </Styled.Container>
   )
 }

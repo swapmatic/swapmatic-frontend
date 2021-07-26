@@ -20,11 +20,13 @@ interface ILogoProps {
 const Logo: React.FC<ILogoProps> = ({ type, ...rest }) => {
   return (
     <Link href="/" passHref>
-      <Styled.Container
-        src={type === 'logo' ? LogoImg : LogotypeImg}
-        objectFit="contain"
-        {...rest}
-      />
+      <a>
+        <Styled.Container
+          src={type === 'logo' ? LogoImg : LogotypeImg}
+          objectFit="contain"
+          {...rest}
+        />
+      </a>
     </Link>
   )
 }

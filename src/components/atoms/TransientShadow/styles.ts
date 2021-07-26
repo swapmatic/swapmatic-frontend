@@ -19,5 +19,8 @@ export const Container = styled.div<ITransientShadowProps>`
     #000000 22.4%,
     rgba(0, 0, 0, 0) 100%
   );
-  transform: rotate(-180deg);
+
+  z-index: 0;
+  transform: ${props =>
+    props.position !== 'top' ? 'rotate(-180deg)' : 'rotate(0deg)'};
 `
