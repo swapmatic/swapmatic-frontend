@@ -10,6 +10,6 @@ export const Container = styled.div`
   & > video {
     min-width: 100%;
     min-height: 100%;
-    filter: blur(10px) brightness(0.5);
+    filter: blur(5px) brightness(0.5);
   }
 `
