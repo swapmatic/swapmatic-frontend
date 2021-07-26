@@ -6,6 +6,7 @@
 import Header from '@/components/organisms/Header'
 import Hero from '@/components/organisms/Hero'
 import BestPrice from '@/components/organisms/BestPrice'
+import Apps from '@/components/organisms/Apps'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <Header />
       <Hero />
       <BestPrice />
+      <Apps />
     </Styled.Container>
   )
 }
