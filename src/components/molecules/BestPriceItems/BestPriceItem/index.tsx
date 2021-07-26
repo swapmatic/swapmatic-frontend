@@ -5,10 +5,10 @@ import Image from 'next/image'
 
 // Componentes
 import Typography from '@/components/atoms/Typography'
+import Anchor from '@/components/atoms/Anchor'
 
 // Subcomponentes and style
 import * as Styled from './styles'
-import Anchor from '../Anchor'
 
 // Services
 

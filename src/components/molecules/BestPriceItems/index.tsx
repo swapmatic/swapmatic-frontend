@@ -6,10 +6,10 @@ import EthImg from '../../../assets/imgs/eth_big.webp'
 import BscImg from '../../../assets/imgs/bsc_big.webp'
 
 // Componentes
-import BestPriceItem from '@/components/atoms/BestPriceItem'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import BestPriceItem from '@/components/molecules/BestPriceItems/BestPriceItem'
 
 // Services
 
