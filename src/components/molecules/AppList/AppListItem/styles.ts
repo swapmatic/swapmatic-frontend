@@ -7,7 +7,7 @@ const mq = facepaint(theme.breakpoints)
 export const Container = styled.div`
   display: grid;
   ${mq({
-    'grid-template-columns': ['1fr', '3fr 7fr 2fr'],
+    'grid-template-columns': ['1fr', '3fr 7fr 3fr'],
     'grid-template-rows': ['2fr 2fr 3fr', '1fr']
   })}
   width: 100%;
@@ -32,8 +32,8 @@ export const Title = styled.div`
 export const Description = styled.div`
   display: flex;
   ${mq({
-    'justify-content': ['center', 'flex-start'],
-    padding: ['1rem 0', '0']
+    'justify-content': ['center', 'center'],
+    padding: ['1rem', '0']
   })}
   align-items: center;
   height: 100%;
