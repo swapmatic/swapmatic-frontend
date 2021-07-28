@@ -51,6 +51,19 @@ export default createGlobalStyle`
     width: 100vw;
   }
 
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid var(--color-primary);
+  }
+
   body, button, textarea, input {
     ${mq({ 'font-size': ['87.5%', '93.75%'] })}
     font-family: 'Comfortaa', cursive;

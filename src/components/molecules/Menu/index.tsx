@@ -12,6 +12,9 @@ import * as Styled from './styles'
 // Services
 
 // Types
+export interface IMenuProps {
+  isMenuToggle: boolean
+}
 
 const links = [
   {
@@ -51,9 +54,9 @@ const links = [
   }
 ]
 
-const Menu: React.FC = () => {
+const Menu: React.FC<IMenuProps> = ({ isMenuToggle }) => {
   return (
-    <Styled.Container>
+    <Styled.Container isMenuToggle={isMenuToggle}>
       {links.map(item => (
         <Styled.MenuItem key={item.title}>
           <Link href={item.href}>
