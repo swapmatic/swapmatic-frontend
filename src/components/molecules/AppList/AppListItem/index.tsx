@@ -25,7 +25,7 @@ const AppListItem: React.FC<IAppListItemProps> = ({
   link
 }) => {
   return (
-    <Styled.Container>
+    <Styled.Container data-aos="zoom-in">
       <Styled.Title>
         <Typography as="heading3">{title}</Typography>
       </Styled.Title>

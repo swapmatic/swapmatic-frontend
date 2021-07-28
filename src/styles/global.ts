@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import 'aos/dist/aos.css'
 
 import facepaint from 'facepaint'
 import theme from '@/styles/theme'
@@ -42,7 +43,6 @@ export default createGlobalStyle`
   html {
     overflow-x: hidden;
     height: 100%;
-    display: flex;
   }
 
   body {
