@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-top: -1rem;
   background-color: var(--color-gradient-1);
   margin-top: 15rem;
-  margin-bottom: 150rem;
+  padding-bottom: 5rem;
 
   &::before {
     content: url('./wave.svg');
@@ -16,16 +16,6 @@ export const Container = styled.div`
     width: 100vw;
     top: 0;
     transform: translateY(-90%);
-    background: transparent;
-  }
-
-  &::after {
-    content: url('./waves.svg');
-    display: block;
-    position: absolute;
-    width: 100vw;
-    bottom: 0;
-    transform: translateY(100%);
     background: transparent;
   }
 `
