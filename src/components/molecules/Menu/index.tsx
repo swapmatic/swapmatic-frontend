@@ -20,32 +20,32 @@ const links = [
   {
     type: 'Anchor',
     title: 'Home',
-    href: '#'
+    href: '#home'
   },
   {
     type: 'Anchor',
     title: 'Best price',
-    href: '#'
+    href: '#bestprice'
   },
   {
     type: 'Anchor',
     title: 'Apps',
-    href: '#'
+    href: '#apps'
   },
   {
     type: 'Anchor',
     title: 'Roadmap',
-    href: '#'
+    href: '#roadmap'
   },
   {
     type: 'Anchor',
     title: 'Team',
-    href: '#'
+    href: '#team'
   },
   {
     type: 'Anchor',
     title: 'Partners',
-    href: '#'
+    href: '#partners'
   },
   {
     type: 'Anchor',

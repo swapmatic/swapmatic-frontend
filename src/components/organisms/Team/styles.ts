@@ -12,4 +12,5 @@ export const Content = styled.div`
   position: relative;
   align-items: center;
   padding: 0 2rem;
+  padding-top: 10rem;
 `

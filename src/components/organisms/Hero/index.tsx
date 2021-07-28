@@ -20,7 +20,7 @@ import * as Styled from './styles'
 
 const Hero: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="home">
       <Wrapper>
         <Styled.Content>
           <HeroTextArea />

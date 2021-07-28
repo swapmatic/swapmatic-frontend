@@ -16,7 +16,7 @@ import * as Styled from './styles'
 
 const Partnership: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="partners">
       <Wrapper>
         <Styled.Content>
           <Typography

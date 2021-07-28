@@ -18,7 +18,7 @@ import * as Styled from './styles'
 
 const BestPrice: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="bestprice">
       <TransientShadow position="top" height="10rem" />
       <BkgVideo video="/network.mp4" />
       <Wrapper>

@@ -14,4 +14,5 @@ export const Content = styled.div`
   align-items: center;
   min-height: 100vh;
   padding: 0 2rem;
+  padding-top: 10rem;
 `

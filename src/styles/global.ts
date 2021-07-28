@@ -49,6 +49,7 @@ export default createGlobalStyle`
     background-color: #000;
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth
   }
 
   body::-webkit-scrollbar {

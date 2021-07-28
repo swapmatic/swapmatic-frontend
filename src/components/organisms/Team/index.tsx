@@ -18,7 +18,7 @@ import * as Styled from './styles'
 
 const Team: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="team">
       <Mist top="0" left="30%" />
       <CircleAbsolute size="538px" top="80%" left="40%" />
       <Wrapper>
