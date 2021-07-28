@@ -9,6 +9,7 @@ import BestPrice from '@/components/organisms/BestPrice'
 import Apps from '@/components/organisms/Apps'
 import RoadMap from '@/components/organisms/RoadMap'
 import Team from '@/components/organisms/Team'
+import Partnership from '@/components/organisms/Partnership'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -26,6 +27,7 @@ const Home: React.FC = () => {
       <Apps />
       <RoadMap />
       <Team />
+      <Partnership />
     </Styled.Container>
   )
 }
