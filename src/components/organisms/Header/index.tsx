@@ -10,18 +10,28 @@ import Button from '@/components/atoms/Button'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import { useState } from 'react'
 
 // Services
 
 // Types
 
 const Header: React.FC = () => {
+  const [isMenuToggle, setIsMenuToggle] = useState(false)
+
   return (
     <Styled.Container>
       <Wrapper>
         <Styled.Content>
           <Logo type="logo" />
-          <Menu />
+          <Menu isMenuToggle={isMenuToggle} />
+          <Styled.MenuToggleButton
+            onClick={() => setIsMenuToggle(!isMenuToggle)}
+          >
+            <div />
+            <div />
+            <div />
+          </Styled.MenuToggleButton>
           <Button
             marginLeft="auto"
             sizeVariant="small"

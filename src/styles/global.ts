@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import 'aos/dist/aos.css'
 
 import facepaint from 'facepaint'
 import theme from '@/styles/theme'
@@ -39,9 +40,29 @@ export default createGlobalStyle`
 
   }
 
+  html {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
   body {
     background-color: #000;
     overflow-x: hidden;
+    width: 100vw;
+    scroll-behavior: smooth
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    border: 3px solid var(--color-primary);
   }
 
   body, button, textarea, input {

@@ -7,6 +7,11 @@ import Header from '@/components/organisms/Header'
 import Hero from '@/components/organisms/Hero'
 import BestPrice from '@/components/organisms/BestPrice'
 import Apps from '@/components/organisms/Apps'
+import RoadMap from '@/components/organisms/RoadMap'
+import Team from '@/components/organisms/Team'
+import Partnership from '@/components/organisms/Partnership'
+import Topics from '@/components/organisms/Topics'
+import Footer from '@/components/organisms/Footer'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -22,6 +27,11 @@ const Home: React.FC = () => {
       <Hero />
       <BestPrice />
       <Apps />
+      <RoadMap />
+      <Team />
+      <Partnership />
+      <Topics />
+      <Footer />
     </Styled.Container>
   )
 }

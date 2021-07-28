@@ -1,6 +1,14 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 import { ICircleAbsoluteProps } from './index'
+
+const flyEffect = keyframes`
+  ${'0%'} {transform: translateY(0)}
+  ${'25%'} {transform: translateY(5%)}
+  ${'50%'} {transform: translateY(10%)}
+  ${'75%'} {transform: translateY(5%)}
+  ${'100%'} {transform: translateY(0%)}
+`
 
 export const Container = styled.div<ICircleAbsoluteProps>`
   position: absolute;
@@ -10,6 +18,8 @@ export const Container = styled.div<ICircleAbsoluteProps>`
   right: ${props => props.right || 'inherit'};
   bottom: ${props => props.bottom || 'inherit'};
   left: ${props => props.left || 'inherit'};
+  animation-name: ${flyEffect};
+  animation: ${flyEffect} 10s ease-in-out infinite;
 
   border-radius: 100%;
 

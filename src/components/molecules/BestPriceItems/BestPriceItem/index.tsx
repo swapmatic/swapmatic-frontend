@@ -28,7 +28,7 @@ const BestPriceItem: React.FC<IBestPriceItemProps> = ({
 }) => {
   return (
     <Anchor href={link}>
-      <Styled.Container>
+      <Styled.Container data-aos="zoom-in">
         <Styled.Header>
           <Typography as="heading2">{title}</Typography>
         </Styled.Header>

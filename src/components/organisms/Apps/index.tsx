@@ -18,7 +18,7 @@ import * as Styled from './styles'
 
 const Apps: React.FC = () => {
   return (
-    <Styled.Container>
+    <Styled.Container id="apps">
       <TransientShadow position="top" height="10rem" />
       <BkgVideo video="/universe.mp4" />
       <Wrapper>

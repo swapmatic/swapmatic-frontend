@@ -12,37 +12,40 @@ import * as Styled from './styles'
 // Services
 
 // Types
+export interface IMenuProps {
+  isMenuToggle: boolean
+}
 
 const links = [
   {
     type: 'Anchor',
     title: 'Home',
-    href: '#'
+    href: '#home'
   },
   {
     type: 'Anchor',
     title: 'Best price',
-    href: '#'
+    href: '#bestprice'
   },
   {
     type: 'Anchor',
     title: 'Apps',
-    href: '#'
+    href: '#apps'
   },
   {
     type: 'Anchor',
     title: 'Roadmap',
-    href: '#'
+    href: '#roadmap'
   },
   {
     type: 'Anchor',
     title: 'Team',
-    href: '#'
+    href: '#team'
   },
   {
     type: 'Anchor',
     title: 'Partners',
-    href: '#'
+    href: '#partners'
   },
   {
     type: 'Anchor',
@@ -51,9 +54,9 @@ const links = [
   }
 ]
 
-const Menu: React.FC = () => {
+const Menu: React.FC<IMenuProps> = ({ isMenuToggle }) => {
   return (
-    <Styled.Container>
+    <Styled.Container isMenuToggle={isMenuToggle}>
       {links.map(item => (
         <Styled.MenuItem key={item.title}>
           <Link href={item.href}>

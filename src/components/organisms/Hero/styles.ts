@@ -1,15 +1,11 @@
 import styled from 'styled-components'
 
-import facepaint from 'facepaint'
-import themes from '@/styles/theme'
-
-const mq = facepaint(themes.breakpoints)
-
 export const Container = styled.div`
   padding-top: 3.5rem;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  position: relative;
 `
 
 export const Content = styled.div`
