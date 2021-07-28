@@ -1,17 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding-top: 3.5rem;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  overflow: visible;
 `
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   position: relative;
   align-items: center;
-  height: calc(100vh - 3.5rem);
-  padding: 0 1rem;
+  padding: 0 2rem;
 `

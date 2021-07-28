@@ -21,6 +21,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <title>SwapMatic</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
       </Head>
+
       <Component {...pageProps} />
       <GlobalStyles />
     </ThemeProvider>

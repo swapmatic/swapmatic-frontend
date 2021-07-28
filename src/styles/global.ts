@@ -39,9 +39,16 @@ export default createGlobalStyle`
 
   }
 
+  html {
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+  }
+
   body {
     background-color: #000;
     overflow-x: hidden;
+    width: 100vw;
   }
 
   body, button, textarea, input {
