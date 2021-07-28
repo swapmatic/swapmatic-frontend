@@ -13,5 +13,5 @@ export const Content = styled.div`
   position: relative;
   align-items: center;
   min-height: 100vh;
-  padding: 0 1rem;
+  padding: 0 2rem;
 `
