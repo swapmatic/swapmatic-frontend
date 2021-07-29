@@ -33,6 +33,7 @@ const RoadMap: React.FC = () => {
             align="center"
             marginTop="8rem"
             marginBottom="4rem"
+            data-aos="fade-left"
           >
             Roadmap
           </Typography>

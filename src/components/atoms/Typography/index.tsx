@@ -13,11 +13,7 @@ export interface ITypographyProps {
 }
 
 const Typography: React.FC<ITypographyProps> = ({ children, ...rest }) => {
-  return (
-    <Styled.Container data-aos="flip-up" {...rest}>
-      {children}
-    </Styled.Container>
-  )
+  return <Styled.Container {...rest}>{children}</Styled.Container>
 }
 
 export default Typography
