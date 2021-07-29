@@ -20,7 +20,7 @@ const RoadMapItem: React.FC<IRoadMapItemProps> = ({ description, status }) => {
   return (
     <Styled.Container>
       <Styled.CheckSphere status={status} />
-      <Typography as="body1" align="center">
+      <Typography data-aos="flip-up" as="body1" align="center">
         {description}
       </Typography>
     </Styled.Container>

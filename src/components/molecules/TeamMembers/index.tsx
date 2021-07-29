@@ -1,7 +1,7 @@
 // External libs
 
 // Assets
-import FakeImg from '../../../assets/imgs/fake.webp'
+import FakeImg from '../../../assets/imgs/user.webp'
 
 // Componentes
 import TeamMember from '@/components/molecules/TeamMembers/TeamMember'

@@ -20,7 +20,7 @@ const BestPrice: React.FC = () => {
   return (
     <Styled.Container id="bestprice">
       <TransientShadow position="top" height="10rem" />
-      <BkgVideo video="/network.mp4" />
+      <BkgVideo video="/networkloop.mp4" />
       <Wrapper>
         <Styled.Content>
           <Typography
@@ -28,6 +28,7 @@ const BestPrice: React.FC = () => {
             align="center"
             marginTop="8rem"
             marginBottom="4rem"
+            data-aos="fade-left"
           >
             SwapMatic always finds the best price using multiple liquidity
             sources

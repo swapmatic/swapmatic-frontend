@@ -45,7 +45,7 @@ const socialMedias = {
 
 const TeamMember: React.FC<ITeamMemberProps> = ({ member }) => {
   return (
-    <Styled.Container>
+    <Styled.Container data-aos="zoom-in">
       <Styled.ImageContainer>
         <Styled.ImageContent>
           <Styled.Image

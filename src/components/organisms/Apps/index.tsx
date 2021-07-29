@@ -20,7 +20,7 @@ const Apps: React.FC = () => {
   return (
     <Styled.Container id="apps">
       <TransientShadow position="top" height="10rem" />
-      <BkgVideo video="/universe.mp4" />
+      <BkgVideo video="/ceiling.mp4" />
       <Wrapper>
         <Styled.Content>
           <Typography
@@ -28,10 +28,16 @@ const Apps: React.FC = () => {
             align="center"
             marginTop="8rem"
             marginBottom="1rem"
+            data-aos="fade-left"
           >
             Become part of this new universe
           </Typography>
-          <Typography as="heading2" marginBottom="1rem" align="center">
+          <Typography
+            as="heading2"
+            marginBottom="1rem"
+            align="center"
+            data-aos="fade-left"
+          >
             Select an APP
           </Typography>
           <AppList />
