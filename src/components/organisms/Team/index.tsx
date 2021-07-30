@@ -6,7 +6,6 @@
 import TeamMembers from '@/components/molecules/TeamMembers'
 import Wrapper from '@/components/atoms/Wrapper'
 import Typography from '@/components/atoms/Typography'
-import Mist from '@/components/atoms/Mist'
 import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 
 // Subcomponentes and style
@@ -19,7 +18,6 @@ import * as Styled from './styles'
 const Team: React.FC = () => {
   return (
     <Styled.Container id="team">
-      <Mist top="0" left="30%" />
       <CircleAbsolute size="538px" top="80%" left="40%" />
       <Wrapper>
         <Styled.Content>

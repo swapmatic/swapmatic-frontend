@@ -4,13 +4,12 @@
 
 // Componentes
 import Wrapper from '@/components/atoms/Wrapper'
-import TransientShadow from '@/components/atoms/TransientShadow'
-import BkgVideo from '@/components/atoms/BkgVideo'
 import AppList from '@/components/molecules/AppList'
 import Typography from '@/components/atoms/Typography'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 
 // Services
 
@@ -19,8 +18,8 @@ import * as Styled from './styles'
 const Apps: React.FC = () => {
   return (
     <Styled.Container id="apps">
-      <TransientShadow position="top" height="10rem" />
-      <BkgVideo video="/ceiling.mp4" />
+      <CircleAbsolute size="800px" top="20%" right="-10%" />
+      <CircleAbsolute size="400px" top="20%" left="12%" />
       <Wrapper>
         <Styled.Content>
           <Typography
@@ -43,7 +42,6 @@ const Apps: React.FC = () => {
           <AppList />
         </Styled.Content>
       </Wrapper>
-      <TransientShadow position="bottom" bottom="0" height="10rem" />
     </Styled.Container>
   )
 }

@@ -81,4 +81,9 @@ export default createGlobalStyle`
     opacity: 0.7;
     cursor: not-allowed;
   }
+
+  #tsparticles {
+    width: 100%;
+    height: 100vh;
+  }
 `

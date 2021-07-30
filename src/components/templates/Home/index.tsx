@@ -15,6 +15,7 @@ import Footer from '@/components/organisms/Footer'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import Mist from '@/components/atoms/Mist'
 
 // Services
 
@@ -23,6 +24,7 @@ import * as Styled from './styles'
 const Home: React.FC = () => {
   return (
     <Styled.Container>
+      <Mist />
       <Header />
       <Hero />
       <BestPrice />

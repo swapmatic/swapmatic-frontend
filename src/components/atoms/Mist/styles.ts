@@ -3,18 +3,13 @@ import styled from 'styled-components'
 import { IMistProps } from './index'
 
 export const Container = styled.div<IMistProps>`
-  position: absolute;
+  position: fixed;
 
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
-  background: linear-gradient(
-    180deg,
-    rgba(21, 58, 113, 0.5) 0%,
-    rgba(40, 145, 249, 0.5) 100%
-  );
-  filter: blur(1000px);
-  transform: rotate(124.14deg);
+  background: radial-gradient(#04101c 0%, var(--color-black) 100%) 0% 0% /
+    contain;
   z-index: -2;
 
   top: ${props => props.top || 'inherit'};
