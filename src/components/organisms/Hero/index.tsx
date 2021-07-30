@@ -8,8 +8,6 @@ import ImageAbsolute from '@/components/atoms/ImageAbsolute'
 import Wrapper from '@/components/atoms/Wrapper'
 import HeroTextArea from '@/components/molecules/HeroTextArea'
 import CircleAbsolute from '@/components/atoms/CircleAbsolute'
-import Mist from '@/components/atoms/Mist'
-import TransientShadow from '@/components/atoms/TransientShadow'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -38,13 +36,11 @@ const Hero: React.FC = () => {
               zIndex: -1
             }}
           />
-          <Mist top="0" left="30%" />
           <CircleAbsolute size="560px" top="-20%" right="75%" />
           <CircleAbsolute size="130px" top="70%" left="25%" />
           <CircleAbsolute size="54px" top="50%" left="40%" />
         </Styled.Content>
       </Wrapper>
-      <TransientShadow position="bottom" bottom="0" height="5rem" />
     </Styled.Container>
   )
 }

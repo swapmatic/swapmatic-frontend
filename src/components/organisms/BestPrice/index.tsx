@@ -4,13 +4,12 @@
 
 // Componentes
 import Wrapper from '@/components/atoms/Wrapper'
-import BkgVideo from '@/components/atoms/BkgVideo'
-import TransientShadow from '@/components/atoms/TransientShadow'
 import BestPriceItems from '@/components/molecules/BestPriceItems'
 import Typography from '@/components/atoms/Typography'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 
 // Services
 
@@ -19,8 +18,11 @@ import * as Styled from './styles'
 const BestPrice: React.FC = () => {
   return (
     <Styled.Container id="bestprice">
-      <TransientShadow position="top" height="10rem" />
-      <BkgVideo video="/networkloop.mp4" />
+      <CircleAbsolute size="200px" top="20%" right="5%" />
+      <CircleAbsolute size="80px" top="0%" left="40%" />
+      <CircleAbsolute size="500px" top="40%" left="-2%" />
+      <CircleAbsolute size="300px" top="80%" right="0%" />
+      <CircleAbsolute size="20px" top="80%" right="50%" />
       <Wrapper>
         <Styled.Content>
           <Typography
@@ -36,7 +38,6 @@ const BestPrice: React.FC = () => {
           <BestPriceItems />
         </Styled.Content>
       </Wrapper>
-      <TransientShadow position="bottom" bottom="0" height="10rem" />
     </Styled.Container>
   )
 }

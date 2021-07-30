@@ -15,7 +15,7 @@ export const Container = styled.div`
     position: absolute;
     width: 100vw;
     top: 0;
-    transform: translateY(-90%);
+    transform: translateY(-80%);
     background: transparent;
   }
 `
