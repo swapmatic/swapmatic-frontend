@@ -36,6 +36,7 @@ const Header: React.FC = () => {
             marginLeft="auto"
             sizeVariant="small"
             colorVariant="primaryReverse"
+            onClick={() => {}}
           >
             Connect Wallet
           </Button>
