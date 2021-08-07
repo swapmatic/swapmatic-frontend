@@ -10,6 +10,7 @@ export const Container = styled.div`
     z-index: 1;
   }
   & > div:last-child {
+    z-index: 0;
     margin-left: -0.5rem !important;
     margin-top: 0.5rem !important;
   }
