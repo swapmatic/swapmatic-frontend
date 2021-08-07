@@ -21,37 +21,37 @@ const links = [
   {
     type: 'Anchor',
     title: 'Home',
-    href: '#home'
+    href: '/#home'
   },
   {
     type: 'Anchor',
     title: 'Best price',
-    href: '#bestprice'
+    href: '/#bestprice'
   },
   {
     type: 'Anchor',
     title: 'Apps',
-    href: '#apps'
+    href: '/#apps'
   },
   {
     type: 'Anchor',
     title: 'Roadmap',
-    href: '#roadmap'
+    href: '/#roadmap'
   },
   {
     type: 'Anchor',
     title: 'Team',
-    href: '#team'
+    href: '/#team'
   },
   {
     type: 'Anchor',
     title: 'Partners',
-    href: '#partners'
+    href: '/home#partners'
   },
   {
     type: 'Anchor',
     title: 'Liquidity Farm',
-    href: '#'
+    href: '/pools'
   }
 ]
 
