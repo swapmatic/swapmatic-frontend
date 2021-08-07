@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <Wrapper>
         <Styled.Content>
           <Logo type="logo" />
-          <Menu isMenuToggle={isMenuToggle} />
+          <Menu setIsMenuToggle={setIsMenuToggle} isMenuToggle={isMenuToggle} />
           <Styled.MenuToggleButton
             onClick={() => setIsMenuToggle(!isMenuToggle)}
           >
@@ -36,6 +36,7 @@ const Header: React.FC = () => {
             marginLeft="auto"
             sizeVariant="small"
             colorVariant="primaryReverse"
+            onClick={() => {}}
           >
             Connect Wallet
           </Button>

@@ -15,7 +15,7 @@ type IContainerProps = Pick<
   | 'marginBottom'
 >
 
-const colorsVariants = {
+export const colorsVariants = {
   primary: css`
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -38,7 +38,7 @@ const colorsVariants = {
   `
 }
 
-const sizesVariants = {
+export const sizesVariants = {
   small: css`
     height: 1.8rem;
     width: 7.5rem;
@@ -49,6 +49,18 @@ const sizesVariants = {
     height: 2.5rem;
     width: 9.38rem;
     font-size: 0.9rem;
+    font-weight: 700;
+  `,
+  large: css`
+    height: 3rem;
+    width: 13rem;
+    font-size: 1rem;
+    font-weight: 700;
+  `,
+  max: css`
+    height: 2.5rem;
+    width: 100%;
+    font-size: 1rem;
     font-weight: 700;
   `
 }

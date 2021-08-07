@@ -7,10 +7,11 @@ import { IMenuProps } from './index'
 
 const mq = facepaint(themes.breakpoints)
 
-export const Container = styled.ul<IMenuProps>`
+type IContainerProps = Omit<IMenuProps, 'setIsMenuToggle'>
+
+export const Container = styled.ul<IContainerProps>`
   list-style: none;
   display: flex;
-  z-index: 1;
   background: red;
   transition: 0.5s transform;
 
@@ -28,6 +29,7 @@ export const Container = styled.ul<IMenuProps>`
     left: ['0', 'inherit']
   })}
   transform: ${props => props.isMenuToggle && 'translateX(0%)'};
+  z-index: 2;
 `
 
 export const MenuItem = styled.li`

@@ -12,8 +12,8 @@ import * as Styled from './styles'
 
 // Types
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  sizeVariant: 'small' | 'medium'
-  colorVariant: 'primary' | 'primaryReverse' | 'white' | 'whiteReverse'
+  sizeVariant: keyof typeof Styled.sizesVariants
+  colorVariant: keyof typeof Styled.colorsVariants
   marginLeft?: string
   marginTop?: string
   marginRight?: string

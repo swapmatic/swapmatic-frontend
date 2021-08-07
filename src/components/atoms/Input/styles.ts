@@ -27,6 +27,7 @@ export const Label = styled.label<IStyledInputProps>`
   left: 0.5rem;
   transition: all 0.5s;
   color: var(--color-white);
+  pointer-events: none;
   ${props => props.isActive && LabelIsActive}
 `
 
