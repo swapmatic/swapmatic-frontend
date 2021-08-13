@@ -3,6 +3,8 @@ import React, { useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { Web3ReactProvider } from '@web3-react/core'
+import Web3 from 'web3'
 // import Amplify from 'aws-amplify'
 
 // Components
@@ -14,6 +16,13 @@ import AOS from 'aos'
 // import config from '@/services/amplify/config'
 // Amplify.configure({ ...config, ssr: true })
 
+// Providers
+import StatusProvider from '@/services/web3/status'
+
+function getLibrary(provider: any) {
+  return new Web3(provider)
+}
+
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init({
@@ -23,15 +32,24 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
-      <Head>
-        <title>SwapMatic</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-      </Head>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <StatusProvider>
+        <ThemeProvider theme={theme}>
+          <Head>
+            <title>SwapMatic</title>
+            <link
+              rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="/favicon.ico"
+            />
+          </Head>
 
-      <Component {...pageProps} />
-      <GlobalStyles />
-    </ThemeProvider>
+          <Component {...pageProps} />
+          <GlobalStyles />
+        </ThemeProvider>
+      </StatusProvider>
+    </Web3ReactProvider>
   )
 }
 

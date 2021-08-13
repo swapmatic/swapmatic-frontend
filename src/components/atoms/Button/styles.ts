@@ -35,6 +35,14 @@ export const colorsVariants = {
     background-color: transparent;
     border-color: var(--color-white);
     color: var(--color-white);
+  `,
+  danger: css`
+    background-color: var(--color-danger);
+    color: var(--color-white);
+  `,
+  warning: css`
+    background-color: var(--color-warning);
+    color: var(--color-white);
   `
 }
 
@@ -44,6 +52,7 @@ export const sizesVariants = {
     width: 7.5rem;
     font-size: 0.8rem;
     font-weight: 700;
+    padding: 0 0.3rem;
   `,
   medium: css`
     height: 2.5rem;
@@ -70,7 +79,9 @@ export const Container = styled.button<IContainerProps>`
   outline: none;
   border-radius: var(--border-radius);
   text-transform: capitalize;
+  overflow: hidden;
   transition: all 0.5s;
+  text-overflow: ellipsis;
   margin-left: ${props => props.marginLeft || '0'};
   margin-top: ${props => props.marginTop || '0'};
   margin-right: ${props => props.marginRight || '0'};
