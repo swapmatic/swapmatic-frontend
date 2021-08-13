@@ -1,5 +1,7 @@
 # SwapMatic Frontend Project
 
+Deployed: [https://swapmatic.vercel.app/](https://swapmatic.vercel.app/)
+
 
 ## Getting Started
 
