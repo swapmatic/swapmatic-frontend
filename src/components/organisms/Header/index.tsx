@@ -1,7 +1,6 @@
+/* eslint-disable prettier/prettier */
 // External libs
-import Web3 from 'web3'
-import Web3Modal from 'web3modal'
-import Portis from '@portis/web3'
+import { useWeb3React } from '@web3-react/core'
 
 // Assets
 
@@ -10,77 +9,58 @@ import Menu from '@/components/molecules/Menu'
 import Logo from '@/components/atoms/Logo'
 import Wrapper from '@/components/atoms/Wrapper'
 import Button from '@/components/atoms/Button'
+import { colorsVariants } from '@/components/atoms/Button/styles'
 
 // Subcomponentes and style
 import * as Styled from './styles'
 import { useState } from 'react'
 
 // Services
+import { injected } from '@/services/web3/wallet'
+import { useStatus } from '@/services/web3/status'
 
 // Types
 
-const providerOptions = {
-  portis: {
-    package: Portis, // required
-    options: {
-      // id: '8e23465f-c9a7-410a-92df-18b2e3d1c38f',
-      // network: 'maticMumbai'
-    }
-  }
-}
-
-let provider = null
-const web3 = null
-let accounts = null
-
 const Header: React.FC = () => {
-  // let web3
   const [isMenuToggle, setIsMenuToggle] = useState(false)
-  const [web3, setWeb3] = useState()
 
-  /* const teste = async () => {
-    // const teste2 = await web3.eth.net.getId()
-    const teste3 = await web3.eth.accounts.wallet
-  } */
+  const { setAttemptConnect, status, attemptConnect } = useStatus()
+  const { active, account, activate, deactivate } =
+    useWeb3React()
 
-  async function showPortis() {
-    if (!provider) {
-      const web3Modal = new Web3Modal({
-        cacheProvider: true, // optional
-        providerOptions // required
-      })
-      web3 = await connect(web3Modal)
+    interface ITextButtomObj {text: string | null | undefined, colorVariant: keyof typeof colorsVariants}
+
+    interface ITextButton {
+      'notconnected': ITextButtomObj
+      'connected': ITextButtomObj
+      'connecting': ITextButtomObj
+      'wrongnetwork': ITextButtomObj
     }
-    if (!accounts) {
-      accounts = await web3.eth.getAccounts()
+
+    const textButton: ITextButton = {
+      notconnected: { text: 'Connect Wallet', colorVariant: 'primaryReverse' },
+      connected: { text: account, colorVariant: 'primary' },
+      connecting: { text: 'Connecting...', colorVariant: 'warning' },
+      wrongnetwork: { text: 'Wrong Network', colorVariant: 'danger' }
     }
-  }
 
-  async function connect(web3Modal) {
-    provider = await web3Modal.connect()
-    return new Web3(provider)
-  }
-
-  /* useEffect(() => {
-    if (window.ethereum) {
-      web3 = new Web3(window.ethereum)
+    async function connect() {
       try {
-        window.ethereum.enable().then(function () {
-          // User has allowed account access to DApp...
-          teste()
-        })
-      } catch (e) {
-        // User has denied account access to DApp...
+        if (active) {
+          deactivate()
+        } else {
+          if (!attemptConnect) {
+            setAttemptConnect(true)
+            await activate(injected)
+            setAttemptConnect(false)
+          }
+        }
+      } catch (err) {
+        console.log(err)
       }
-    } else if (window.web3) {
-      web3 = new Web3(window.web3.currentProvider)
-      alert('web33')
-    } else {
-      alert('You have to install MetaMask !')
     }
-  }, []) */
 
-  return (
+    return (
     <Styled.Container>
       <Wrapper>
         <Styled.Content>
@@ -96,28 +76,15 @@ const Header: React.FC = () => {
           <Button
             marginLeft="auto"
             sizeVariant="small"
-            colorVariant="primaryReverse"
-            onClick={() => {
-              showPortis()
-            }}
+            colorVariant={textButton[status].colorVariant}
+            onClick={connect}
           >
-            Connect Wallet
+            {textButton[status].text}
           </Button>
-          <Button
-            marginLeft="auto"
-            sizeVariant="small"
-            colorVariant="primaryReverse"
-            onClick={() => {
-              getWallet()
-            }}
-          >
-            teste
-          </Button>
-          <span id="userWalletAddress"></span>
         </Styled.Content>
       </Wrapper>
     </Styled.Container>
-  )
+    )
 }
 
 export default Header
