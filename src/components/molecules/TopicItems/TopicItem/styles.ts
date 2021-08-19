@@ -10,8 +10,9 @@ export const Container = styled.div`
   padding-top: 1rem;
   width: 100%;
   display: grid;
+  position: relative;
   ${mq({
-    'grid-template-columns': ['1fr', '2fr 3fr'],
+    'grid-template-columns': ['1fr', '1fr 1fr'],
     'grid-template-rows': ['3fr 2fr', '1fr']
   })}
 `
@@ -33,8 +34,10 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  max-width: 25rem;
   ${mq({
     'align-items': ['center', 'flex-start'],
-    width: ['25rem', 'inherit']
-  })}
+    width: ['100%', 'inherit'],
+    margin: ['auto', 'inherit']
+  })};
 `

@@ -17,20 +17,23 @@ const appList = [
     title: 'Swap Aggregator',
     description:
       'Finds always the best price using liquidity of multiple pools.',
-    link: '#'
+    link: 'https://v2.swapmatic.io/#/matic/swap',
+    newPage: true
   },
   {
     title: 'SWAM Staking',
     description:
       'Stake your SWAM tokens for 25% APR + your share of aggregation revenue.',
-    link: '#'
+    link: '#',
+    newPage: false
   },
   {
     title: 'SWAM Pooling',
     description:
       'Provide liquidity in SWAM pools and earn 100% or more APR, guaranteed.',
-    link: '#'
-  },
+    link: '/pools',
+    newPage: false
+  } /*,
   {
     title: 'SWAM Universe',
     description: 'Pool and earn rewards offered by our partnership projects.',
@@ -40,7 +43,7 @@ const appList = [
     title: 'Swapman NFT',
     description: 'Get a Swapman NFT and other non-fungible tokens.',
     link: '#'
-  }
+  } */
 ]
 
 const AppList: React.FC = () => {
@@ -52,6 +55,7 @@ const AppList: React.FC = () => {
           title={item.title}
           description={item.description}
           link={item.link}
+          newPage={item.newPage}
         />
       ))}
     </Styled.Container>

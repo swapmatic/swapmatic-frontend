@@ -19,7 +19,6 @@ const Apps: React.FC = () => {
   return (
     <Styled.Container id="apps">
       <CircleAbsolute size="800px" top="20%" right="-10%" />
-      <CircleAbsolute size="400px" top="20%" left="12%" />
       <Wrapper>
         <Styled.Content>
           <Typography

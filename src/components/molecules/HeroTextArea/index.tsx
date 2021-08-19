@@ -28,13 +28,19 @@ const HeroTextArea: React.FC = () => {
           The Ultimate SWAP Aggregator
         </Typography>
         <Column>
-          <Button
-            marginBottom="0.5rem"
-            colorVariant="primary"
-            sizeVariant="medium"
+          <form
+            action="https://app.swapmatic.io/staking/"
+            target="_blank"
+            method="get"
           >
-            Launch APP
-          </Button>
+            <Button
+              marginBottom="0.5rem"
+              colorVariant="primary"
+              sizeVariant="medium"
+            >
+              Launch APP
+            </Button>
+          </form>
           <Button colorVariant="white" sizeVariant="medium">
             White Paper
           </Button>

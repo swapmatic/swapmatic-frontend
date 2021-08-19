@@ -20,7 +20,6 @@ const RoadMap: React.FC = () => {
     <Styled.Container id="roadmap">
       <CircleAbsolute size="150px" top="0%" right="75%" />
       <CircleAbsolute size="50px" top="20%" left="50%" />
-      <CircleAbsolute size="300px" top="20%" right="0%" />
       <CircleAbsolute size="1050px" top="50%" left="-10%" />
       <Wrapper>
         <Styled.Content>

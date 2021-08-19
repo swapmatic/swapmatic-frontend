@@ -1,5 +1,7 @@
 // External libs
 import { useEffect, useState } from 'react'
+import { useWeb3React } from '@web3-react/core'
+import axios from 'axios'
 
 // Assets
 import SwamImg from '../../../assets/imgs/swam_32.png'
@@ -42,12 +44,30 @@ const poolList: IPoolItem[] = [
 ]
 
 const PoolItems: React.FC = () => {
+  const { account } = useWeb3React()
   const [isStaked, setIsStaked] = useState(false)
   const [modal, setIsModal] = useState(false)
+  const [pools, setPools] = useState<any>(null)
+
+  const getPools = async (wallet: string | null | undefined) => {
+    if (wallet) {
+      const response = await axios.get('http://localhost:3000/api/pools')
+      setPools(response.data)
+      console.log('wallet')
+      console.log(response.data)
+    } else {
+      const response = await axios.get('http://localhost:3000/api/pools')
+      setPools(response.data)
+      console.log('!wallet')
+      console.log(response.data)
+    }
+  }
 
   useEffect(() => {
-    console.log(isStaked)
-  }, [isStaked])
+    getPools(account)
+  }, [account])
+
+  !pools && <div />
 
   return (
     <Styled.Container>

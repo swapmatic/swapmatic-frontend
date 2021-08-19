@@ -17,12 +17,14 @@ interface IAppListItemProps {
   title: string
   description: string
   link: string
+  newPage: boolean
 }
 
 const AppListItem: React.FC<IAppListItemProps> = ({
   title,
   description,
-  link
+  link,
+  newPage
 }) => {
   return (
     <Styled.Container data-aos="zoom-in">
@@ -35,11 +37,20 @@ const AppListItem: React.FC<IAppListItemProps> = ({
         </Typography>
       </Styled.Description>
       <Styled.Action>
-        <Anchor href={link}>
-          <Button sizeVariant="medium" colorVariant="primary">
-            Launch App
-          </Button>
-        </Anchor>
+        {newPage && (
+          <Anchor href={link} target="_blank">
+            <Button sizeVariant="medium" colorVariant="primary">
+              Launch App
+            </Button>
+          </Anchor>
+        )}
+        {!newPage && (
+          <Anchor href={link}>
+            <Button sizeVariant="medium" colorVariant="primary">
+              Launch App
+            </Button>
+          </Anchor>
+        )}
       </Styled.Action>
     </Styled.Container>
   )

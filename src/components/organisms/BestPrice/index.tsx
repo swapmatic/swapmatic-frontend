@@ -21,7 +21,6 @@ const BestPrice: React.FC = () => {
       <CircleAbsolute size="200px" top="20%" right="5%" />
       <CircleAbsolute size="80px" top="0%" left="40%" />
       <CircleAbsolute size="500px" top="40%" left="-2%" />
-      <CircleAbsolute size="300px" top="80%" right="0%" />
       <CircleAbsolute size="20px" top="80%" right="50%" />
       <Wrapper>
         <Styled.Content>

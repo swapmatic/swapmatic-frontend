@@ -15,38 +15,42 @@ import * as Styled from './styles'
 const roadMapItemsList = [
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      '8-2020 SwapMatic v1 is deployed on  Mumbai testnet and Matic Network',
     status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+      "9-2020 SwapMatic is #7 in Matic Network's first Build-n-Earn Hackathon.",
     status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    status: false
+      "11-2020 Staking NFT Contract 'BOSS' is developed. SwapMatic & BOSS is #1 in Matic Network's & Metacartel's hackathon.",
+    status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    status: false
+      '12-2020 SwapMatic introduces a liquidity farming approach that does not require depositing LP tokens.',
+    status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    status: false
+      '1-2021 SWAM PoS token is deployed in Ethereum Mainnet and mapped to Matic.',
+    status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    status: false
+      '2-2021 SWAM farming and staking starts in collaboration with blocktimeworld.com. Liquidity and adoption grows.',
+    status: true
+  },
+  {
+    description: '3-2021 Swapman appears the first time.',
+    status: true
   },
   {
     description:
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    status: false
+      '6-2021 SwapMatic aggregator launched in Polygon, BSC, and Mainnet. Universal token lists are introduced.',
+    status: true
   }
 ]
 

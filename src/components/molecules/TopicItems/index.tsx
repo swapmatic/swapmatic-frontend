@@ -8,6 +8,7 @@ import TopicItem from '@/components/molecules/TopicItems/TopicItem'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import TokenWatcher from './TokenWatcher'
 
 // Services
 
@@ -31,6 +32,7 @@ const topicsItemsList: ITopicItem[] = [
 const TopicItems: React.FC = () => {
   return (
     <Styled.Container>
+      <TokenWatcher />
       {topicsItemsList.map(item => (
         <TopicItem key={item.title1} topic={item} />
       ))}
