@@ -8,7 +8,6 @@ import Hero from '@/components/organisms/Hero'
 import BestPrice from '@/components/organisms/BestPrice'
 import Apps from '@/components/organisms/Apps'
 import RoadMap from '@/components/organisms/RoadMap'
-import Team from '@/components/organisms/Team'
 import Partnership from '@/components/organisms/Partnership'
 import Topics from '@/components/organisms/Topics'
 import Footer from '@/components/organisms/Footer'
@@ -30,7 +29,6 @@ const Home: React.FC = () => {
       <BestPrice />
       <Apps />
       <RoadMap />
-      <Team />
       <Partnership />
       <Topics />
       <Footer />
