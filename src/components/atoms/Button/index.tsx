@@ -18,6 +18,7 @@ export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   marginTop?: string
   marginRight?: string
   marginBottom?: string
+  margin?: string
 }
 
 const Button: React.FC<IButtonProps> = ({ children, ...rest }) => {

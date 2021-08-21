@@ -22,6 +22,10 @@ export default createGlobalStyle`
     --color-gray-800: #313A42;
     --color-black: #000000;
     --color-white: #FFFFFF;
+    --color-metamask: #FFD6D6;
+    --color-polygon: #E0CDFF;
+    --color-chart: #B9EAC7;
+    --color-swapman: #A1D0FE;
 
     // Footer Gradient Colors
     --color-gradient-1: #E5F0FF;

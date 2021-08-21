@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import facepaint from 'facepaint'
+import theme from '@/styles/theme'
+
+const mq = facepaint(theme.breakpoints)
 
 export const Container = styled.div`
   padding-top: 3.5rem;
@@ -14,4 +18,8 @@ export const Content = styled.div`
   align-items: center;
   height: calc(100vh - 3.5rem);
   padding: 0 1rem;
+
+  & > div:nth-child(2) {
+    ${mq({ top: ['30%', 'inherit'] })}
+  }
 `

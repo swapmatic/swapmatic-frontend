@@ -6,6 +6,7 @@ export const Container = styled.div`
   min-height: 100vh;
   overflow: visible;
   padding-top: 3.5rem;
+  margin-bottom: 5rem;
 `
 
 export const Content = styled.div`
@@ -13,7 +14,7 @@ export const Content = styled.div`
   flex-direction: column;
   position: relative;
   align-items: center;
-  height: calc(100vh - 3.5rem);
+  min-height: calc(100vh - 3.5rem);
   padding: 0 2rem;
   justify-content: flex-start;
 `

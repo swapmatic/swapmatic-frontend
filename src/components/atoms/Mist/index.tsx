@@ -25,7 +25,7 @@ const Mist: React.FC<IMistProps> = ({ ...rest }) => {
         params={{
           particles: {
             number: {
-              value: 50,
+              value: 30,
               density: {
                 enable: true,
                 value_area: 1803.4120608655228
