@@ -3,8 +3,8 @@
 // Assets
 
 // Componentes
-import Link from '@/components/atoms/Link'
 import Typography from '@/components/atoms/Typography'
+import Anchor from '@/components/atoms/Anchor'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -25,42 +25,38 @@ interface IFooterMenuItems {
 const footerMenuItemsList: IFooterMenuItems = {
   left: [
     {
-      title: 'Liquidity Mining',
-      link: '#'
+      title: 'BlockTimeWorld',
+      link: 'https://blocktimeworld.com/'
     },
     {
-      title: 'Token List',
-      link: '#'
+      title: 'Swapman NFT',
+      link: 'https://polygonscan.com/token/0xfe1323b8819a3e5ee9a9737db2778cf3bfa30d2f'
     },
     {
-      title: 'Whitepaper',
-      link: '#'
+      title: 'Opensea',
+      link: 'https://opensea.io/collection/swapman-nft'
     },
     {
-      title: 'Github',
-      link: '#'
+      title: 'Swapdog',
+      link: 'https://swapdog.io/'
     }
   ],
   right: [
     {
-      title: 'Uniswap',
-      link: '#'
+      title: 'SwapMatic Token',
+      link: 'https://polygonscan.com/address/0x94C18174840F80D49d59DC3a1742aF0B884A8184'
     },
     {
-      title: 'Quickswap',
-      link: '#'
+      title: 'QuickSwap',
+      link: 'https://info.quickswap.exchange/token/0x94c18174840f80d49d59dc3a1742af0b884a8184'
     },
     {
-      title: 'Coinpaprika',
-      link: '#'
+      title: 'Dfyn',
+      link: 'https://info.dfyn.network/token/0x94c18174840f80d49d59dc3a1742af0b884a8184'
     },
     {
-      title: 'Etherscan',
-      link: '#'
-    },
-    {
-      title: 'Polygon',
-      link: '#'
+      title: 'Github',
+      link: 'https://github.com/swapmatic'
     }
   ]
 }
@@ -71,22 +67,22 @@ const FooterMenuItems: React.FC = () => {
       <Styled.Split>
         {footerMenuItemsList.left.map(item => (
           <li key={item.title}>
-            <Link href={item.link}>
+            <Anchor target="_blank" href={item.link}>
               <Typography color="var(--color-gray-800)" as="body2">
                 {item.title}
               </Typography>
-            </Link>
+            </Anchor>
           </li>
         ))}
       </Styled.Split>
       <Styled.Split>
         {footerMenuItemsList.right.map(item => (
           <li key={item.title}>
-            <Link href={item.link}>
+            <Anchor target="_blank" href={item.link}>
               <Typography color="var(--color-gray-800)" as="body2">
                 {item.title}
               </Typography>
-            </Link>
+            </Anchor>
           </li>
         ))}
       </Styled.Split>

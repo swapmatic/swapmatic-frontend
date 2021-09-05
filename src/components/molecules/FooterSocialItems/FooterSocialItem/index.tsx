@@ -12,7 +12,7 @@ import TwitterSvg from '../../../../assets/svgs/twitter_small.svg'
 
 // Subcomponentes and style
 import * as Styled from './styles'
-import Link from '@/components/atoms/Link'
+import Anchor from '@/components/atoms/Anchor'
 
 // Services
 
@@ -37,9 +37,9 @@ const socialMedias = {
 
 const FooterSocialItem: React.FC<IFooterSocialItemProps> = ({ social }) => {
   return (
-    <Link href={social.link}>
+    <Anchor target="_blank" href={social.link}>
       <Styled.Container>{socialMedias[social.type]}</Styled.Container>
-    </Link>
+    </Anchor>
   )
 }
 

@@ -9,6 +9,7 @@ import Typography from '@/components/atoms/Typography'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import Alert from './Alert'
 
 // Services
 
@@ -17,6 +18,7 @@ import * as Styled from './styles'
 const PoolList: React.FC = () => {
   return (
     <Styled.Container>
+      <Alert />
       <Wrapper>
         <Styled.Content>
           <Typography
@@ -34,9 +36,8 @@ const PoolList: React.FC = () => {
             align="center"
             data-aos="fade-left"
           >
-            Tokens pooled in SwapMatic or SWAM pools earn 100% or more APR
-            returns. That is a great opportunity to build adoption for your
-            project.
+            Liquidity in SWAM pools earn 100% APR or more. Rewards are paid
+            directly to your account daily. No need to deposit LP tokens.
           </Typography>
           <PoolItems />
         </Styled.Content>

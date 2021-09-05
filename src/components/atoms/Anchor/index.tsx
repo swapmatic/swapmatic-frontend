@@ -16,6 +16,7 @@ export interface IAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   marginRight?: string
   marginBottom?: string
   marginLeft?: string
+  color?: string
 }
 
 const Anchor: React.FC<IAnchorProps> = ({ children, ...rest }) => {

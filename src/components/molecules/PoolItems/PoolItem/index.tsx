@@ -1,9 +1,11 @@
 // External libs
+import { memo, useState } from 'react'
 
 // Assets
 
 // Componentes
 import Typography from '@/components/atoms/Typography'
+import PoolItemDetailsModal from '@/components/molecules/PoolItems/PoolItem/PoolItemDetailsModal'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -14,38 +16,63 @@ import Button from '@/components/atoms/Button'
 // Services
 
 // Types
-export interface IPoolItem {
-  tokenPairImg1: string
-  tokenPairImg2: string
-  pairInfo: string
+export interface IPool {
+  id: number
   system: string
-  swamBalance: string
-  apr: string
-  earned: string
-  staked: boolean
+  poolName: string
+  swapLink: string
+  swapTrade: string
+  apr: number
+  active: number
+  secondaryAssetName: string
+  poolTokenBalance: number
+  swamPrice: number
+  poolBalanceUpdate: string
+  holderAddress: null | string
+  holderBalance: null | number
+  holderBalanceUsd: null | number
+  pendingRewardsSwam: null | number
+  pendingRewardsUsd: null | number
+  holderShare: null | number
+  timestamped: null | string
 }
 
 interface IPoolItemProps {
-  poolItem: IPoolItem
-  setIsModal: (data: true) => void
+  poolItem: IPool
 }
 
-const PoolItem: React.FC<IPoolItemProps> = ({ poolItem, setIsModal }) => {
+const PoolItem: React.FC<IPoolItemProps> = ({ poolItem }) => {
+  const [modal, setIsModal] = useState(false)
+
   return (
     <Styled.Container>
+      {modal && (
+        <PoolItemDetailsModal setIsModal={setIsModal} poolSelected={poolItem} />
+      )}
       <Styled.IconsContainer>
-        <PoolItemPair
-          img1={poolItem.tokenPairImg1}
-          img2={poolItem.tokenPairImg2}
-        />
+        <PoolItemPair img1="swam" img2={poolItem.secondaryAssetName} />
       </Styled.IconsContainer>
       <Styled.PairTokensContainer>
-        <Typography as="heading3">{poolItem.pairInfo}</Typography>
+        <Typography as="heading3">{poolItem.poolName}</Typography>
       </Styled.PairTokensContainer>
-      <PoolItemInfo title="System" info={poolItem.system} />
-      <PoolItemInfo title="Pool SWAM Balance" info={poolItem.swamBalance} />
-      <PoolItemInfo title="APR" info={poolItem.apr} />
-      <PoolItemInfo title="Earned" info={poolItem.earned} />
+      <PoolItemInfo title="DeFi" info={poolItem.system} />
+      <PoolItemInfo
+        title="Pool Balance"
+        info={
+          poolItem.poolTokenBalance
+            ? String(poolItem.poolTokenBalance.toFixed(2)) + ' SWAM'
+            : '0 SWAM'
+        }
+      />
+      <PoolItemInfo title="APR" info={`${String(poolItem.apr * 100)}%`} />
+      <PoolItemInfo
+        title="Pending"
+        info={`${String(
+          poolItem.pendingRewardsSwam === null
+            ? 0
+            : poolItem.pendingRewardsSwam.toFixed(2)
+        )} SWAM`}
+      />
       <Button
         colorVariant="primary"
         onClick={() => setIsModal(true)}
@@ -57,4 +84,4 @@ const PoolItem: React.FC<IPoolItemProps> = ({ poolItem, setIsModal }) => {
   )
 }
 
-export default PoolItem
+export default memo(PoolItem)

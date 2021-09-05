@@ -11,6 +11,7 @@ import Wrapper from '@/components/atoms/Wrapper'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import Anchor from '@/components/atoms/Anchor'
 
 // Services
 
@@ -37,7 +38,22 @@ const Footer: React.FC = () => {
             marginTop="3rem"
             as="body2"
           >
-            Powered by Polygon
+            Powered by{' '}
+            <Anchor
+              target="_blank"
+              color="var(--color-primary)"
+              href="https://0x.org/"
+            >
+              0x
+            </Anchor>{' '}
+            &{' '}
+            <Anchor
+              target="_blank"
+              color="var(--color-primary)"
+              href="https://polygon.technology/"
+            >
+              Polygon
+            </Anchor>
           </Typography>
         </Styled.Content>
       </Wrapper>

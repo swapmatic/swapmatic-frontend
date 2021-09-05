@@ -23,11 +23,11 @@ const links = [
     title: 'Home',
     href: '/#home'
   },
-  {
+  /* {
     type: 'Anchor',
     title: 'Best price',
     href: '/#bestprice'
-  },
+  }, */
   {
     type: 'Anchor',
     title: 'Apps',
@@ -38,20 +38,30 @@ const links = [
     title: 'Roadmap',
     href: '/#roadmap'
   },
-  {
+  /* {
     type: 'Anchor',
     title: 'Team',
     href: '/#team'
-  },
+  }, */
   {
     type: 'Anchor',
     title: 'Partners',
-    href: '/home#partners'
+    href: '/#partners'
   },
   {
     type: 'Anchor',
-    title: 'Liquidity Farm',
+    title: 'Farming',
     href: '/pools'
+  },
+  {
+    type: 'Anchor',
+    title: 'Staking',
+    href: '/staking'
+  },
+  {
+    type: 'Anchor',
+    title: 'SWAM price',
+    href: '/#token'
   }
 ]
 

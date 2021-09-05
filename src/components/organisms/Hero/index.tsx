@@ -31,8 +31,10 @@ const Hero: React.FC = () => {
               objectFit: 'contain'
             }}
             position={{
-              top: '50%',
-              translation: { x: '50%', y: '-50%' },
+              top: '5%',
+              right: '0',
+              left: '30%',
+              translation: { x: '0%', y: '0' },
               zIndex: -1
             }}
           />

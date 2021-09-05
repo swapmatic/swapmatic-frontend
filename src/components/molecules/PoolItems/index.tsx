@@ -1,99 +1,66 @@
+/* eslint-disable prettier/prettier */
 // External libs
-import { useEffect, useState } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import axios from 'axios'
 
 // Assets
-import SwamImg from '../../../assets/imgs/swam_32.png'
-import Usdcimg from '../../../assets/imgs/usdc_32.png'
 
 // Componentes
-import Input from '@/components/atoms/Input'
+// import Input from '@/components/atoms/Input'
 
 // Subcomponentes and style
 import * as Styled from './styles'
-import PoolItem, { IPoolItem } from './PoolItem'
+import PoolItem, { IPool } from './PoolItem'
 import ToggleSwitch from '@/components/atoms/ToggleSwitch'
-import PoolItemDetailsModal from './PoolItemDetailsModal'
+import PoolItemSkeleton from './PoolItemSkeleton'
 
 // Services
 
 // Types
 
-const poolList: IPoolItem[] = [
-  {
-    tokenPairImg1: SwamImg,
-    tokenPairImg2: Usdcimg,
-    pairInfo: 'SWAM-USDC',
-    system: 'QuickSwap',
-    swamBalance: '526.80',
-    apr: '200.00%',
-    earned: '3.122 SWAM',
-    staked: true
-  },
-  {
-    tokenPairImg1: SwamImg,
-    tokenPairImg2: Usdcimg,
-    pairInfo: 'SWAM-MATIC',
-    system: 'QuickSwap',
-    swamBalance: '526.80',
-    apr: '200.00%',
-    earned: '0 SWAM',
-    staked: false
-  }
-]
-
 const PoolItems: React.FC = () => {
   const { account } = useWeb3React()
   const [isStaked, setIsStaked] = useState(false)
-  const [modal, setIsModal] = useState(false)
-  const [pools, setPools] = useState<any>(null)
+  const [pools, setPools] = useState<IPool[] | null>(null)
 
   const getPools = async (wallet: string | null | undefined) => {
-    if (wallet) {
-      const response = await axios.get('http://localhost:3000/api/pools')
-      setPools(response.data)
-      console.log('wallet')
-      console.log(response.data)
-    } else {
-      const response = await axios.get('http://localhost:3000/api/pools')
-      setPools(response.data)
-      console.log('!wallet')
-      console.log(response.data)
-    }
+    const response = await axios.get(`/api/pools/${wallet}`)
+    setPools(response.data)
   }
 
   useEffect(() => {
     getPools(account)
+    setInterval(function() { getPools(account) }, 300000)
   }, [account])
-
-  !pools && <div />
 
   return (
     <Styled.Container>
-      {modal && <PoolItemDetailsModal setIsModal={setIsModal} id={1} />}
       <Styled.HeaderFilters>
         <ToggleSwitch
           setIsStaked={setIsStaked}
           isStaked={isStaked}
           marginRight="1rem"
         />
-        <Input label="Search" />
+        {/* <Input label="Search" /> */}
       </Styled.HeaderFilters>
       <Styled.Content>
-        {poolList.map(
+        {!pools && <><PoolItemSkeleton /><PoolItemSkeleton /><PoolItemSkeleton /><PoolItemSkeleton /></>}
+        {pools && pools.map(
           item =>
-            (isStaked && item.staked && (
-              <PoolItem
-                key={item.pairInfo}
-                setIsModal={setIsModal}
-                poolItem={item}
-              />
+            (isStaked &&
+              ((item.pendingRewardsSwam !== null &&
+                item.pendingRewardsSwam > 0) ||
+                (item.pendingRewardsUsd !== null &&
+                  item.pendingRewardsUsd > 0)) && (
+                <PoolItem
+                  key={item.id}
+                  poolItem={item}
+                />
             )) ||
             (!isStaked && (
               <PoolItem
-                setIsModal={setIsModal}
-                key={item.pairInfo}
+                key={item.id}
                 poolItem={item}
               />
             ))
@@ -103,4 +70,4 @@ const PoolItems: React.FC = () => {
   )
 }
 
-export default PoolItems
+export default memo(PoolItems)

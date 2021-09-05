@@ -13,19 +13,20 @@ type IContainerProps = Pick<
   | 'marginTop'
   | 'marginRight'
   | 'marginBottom'
+  | 'margin'
 >
 
 export const colorsVariants = {
   primary: css`
     background-color: var(--color-primary);
     color: var(--color-white);
-    animation: ${pulseRad} ease-in-out 4s infinite;
+    // animation: ${pulseRad} ease-in-out 4s infinite;
   `,
   primaryReverse: css`
     background-color: transparent;
     border-color: var(--color-primary);
     color: var(--color-primary);
-    animation: ${pulseRad} ease-in-out 4s infinite;
+    // animation: ${pulseRad} ease-in-out 4s infinite;
   `,
   white: css`
     background-color: var(--color-white);
@@ -43,6 +44,22 @@ export const colorsVariants = {
   warning: css`
     background-color: var(--color-warning);
     color: var(--color-white);
+  `,
+  metamask: css`
+    background-color: var(--color-metamask);
+    color: var(--color-black);
+  `,
+  polygon: css`
+    background-color: var(--color-polygon);
+    color: var(--color-black);
+  `,
+  chart: css`
+    background-color: var(--color-chart);
+    color: var(--color-black);
+  `,
+  swapman: css`
+    background-color: var(--color-swapman);
+    color: var(--color-black);
   `
 }
 
@@ -69,7 +86,7 @@ export const sizesVariants = {
   max: css`
     height: 2.5rem;
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
   `
 }
@@ -78,14 +95,16 @@ export const Container = styled.button<IContainerProps>`
   border: 1px solid transparent;
   outline: none;
   border-radius: var(--border-radius);
-  text-transform: capitalize;
   overflow: hidden;
   transition: all 0.5s;
   text-overflow: ellipsis;
-  margin-left: ${props => props.marginLeft || '0'};
-  margin-top: ${props => props.marginTop || '0'};
-  margin-right: ${props => props.marginRight || '0'};
-  margin-bottom: ${props => props.marginBottom || '0'};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: ${props => props.marginLeft || 'inherit'};
+  margin-top: ${props => props.marginTop || 'inherit'};
+  margin-right: ${props => props.marginRight || 'inherit'};
+  margin-bottom: ${props => props.marginBottom || 'inherit'};
   ${props => colorsVariants[props.colorVariant]};
   ${props => sizesVariants[props.sizeVariant]};
   &:hover {
@@ -93,5 +112,9 @@ export const Container = styled.button<IContainerProps>`
   }
   &:active {
     filter: brightness(0.5);
+  }
+
+  & > svg {
+    margin-right: 0.5rem;
   }
 `

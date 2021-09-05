@@ -1,7 +1,6 @@
 // External libs
 
 // Assets
-import Anchor from '@/components/atoms/Anchor'
 import Button from '@/components/atoms/Button'
 import Typography from '@/components/atoms/Typography'
 
@@ -45,7 +44,7 @@ const TopicItem: React.FC<ITopicItemProps> = ({ topic }) => {
           {topic.description}
         </Typography>
         {topic.button && (
-          <Anchor href={topic.button.link}>
+          <form action={topic.button.link} target="_blank" method="get">
             <Button
               marginTop="1rem"
               sizeVariant="medium"
@@ -53,7 +52,7 @@ const TopicItem: React.FC<ITopicItemProps> = ({ topic }) => {
             >
               {topic.button.title}
             </Button>
-          </Anchor>
+          </form>
         )}
       </Styled.InfoContainer>
     </Styled.Container>

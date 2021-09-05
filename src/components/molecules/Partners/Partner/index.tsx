@@ -23,7 +23,7 @@ interface IPartnerProps {
 
 const Partner: React.FC<IPartnerProps> = ({ partner }) => {
   return (
-    <Anchor href={partner.link}>
+    <Anchor target="_blank" href={partner.link}>
       <Styled.Container>
         <Styled.Image src={partner.image} />
       </Styled.Container>

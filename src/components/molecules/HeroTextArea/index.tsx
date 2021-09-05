@@ -41,9 +41,9 @@ const HeroTextArea: React.FC = () => {
               Launch APP
             </Button>
           </form>
-          <Button colorVariant="white" sizeVariant="medium">
+          {/* <Button colorVariant="white" sizeVariant="medium">
             White Paper
-          </Button>
+  </Button> */}
         </Column>
       </Styled.HeadingArea>
       <Styled.PoweredArea>

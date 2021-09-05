@@ -9,7 +9,7 @@ export const Container = styled.li`
   padding: 1rem;
   width: 100%;
   border-radius: var(--border-radius);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 1);
   border: 2px solid rgba(255, 255, 255, 0.1);
 
   ${mq({
@@ -18,7 +18,7 @@ export const Container = styled.li`
     'align-items': ['inherit', 'center'],
     'grid-template-columns': [
       '1fr 1fr 1fr 1fr',
-      '0.5fr 1fr 1fr 1fr 0.7fr 1fr 1fr'
+      '0.5fr 1.2fr 0.6fr 1fr 0.5fr 0.7fr 1fr'
     ],
     'grid-template-rows': ['1fr 1.5fr 2fr', '1fr']
   })};

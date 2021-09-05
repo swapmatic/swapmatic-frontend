@@ -1,7 +1,10 @@
 // External libs
 
 // Assets
-import CoinPaprikaImg from '../../../assets/imgs/coin_paprika_big.webp'
+import ZeroxSvg from '../../../assets/imgs/zerox.webp'
+import PolygonSvg from '../../../assets/imgs/polygon_logotype.webp'
+import DexkitImg from '../../../assets/imgs/dexkit.webp'
+import DigitalOceanImg from '../../../assets/imgs/digital_ocean.webp'
 
 // Componentes
 import Partner from '@/components/molecules/Partners/Partner'
@@ -15,39 +18,24 @@ import * as Styled from './styles'
 
 const parnersList = [
   {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
+    name: '0x',
+    link: 'https://0x.org/',
+    image: ZeroxSvg
   },
   {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
+    name: 'Polygon',
+    link: 'https://polygon.technology/',
+    image: PolygonSvg
   },
   {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
+    name: 'Dexkit',
+    link: 'https://dexkit.com/',
+    image: DexkitImg
   },
   {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
-  },
-  {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
-  },
-  {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
-  },
-  {
-    name: 'CoinPaprika',
-    link: '#',
-    image: CoinPaprikaImg
+    name: 'DigitalOcean',
+    link: 'https://www.digitalocean.com/',
+    image: DigitalOceanImg
   }
 ]
 
