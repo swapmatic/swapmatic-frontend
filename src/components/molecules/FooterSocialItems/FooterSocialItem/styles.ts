@@ -14,7 +14,13 @@ export const Container = styled.li`
     background-color: var(--color-primary);
   }
 
+  color: var(--color-gray-800) !important;
+
+  & > svg {
+    fill: var(--color-gray-800) !important;
+  }
+
   & > svg > path {
-    fill: var(--color-gray-800);
+    fill: var(--color-gray-800) !important;
   }
 `

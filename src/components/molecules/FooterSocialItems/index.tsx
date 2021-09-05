@@ -15,23 +15,23 @@ import * as Styled from './styles'
 const socialItemsList: IItem[] = [
   {
     type: 'telegram',
-    link: '#'
-  },
-  {
-    type: 'linkedin',
-    link: '#'
+    link: 'https://t.me/joinchat/bOKzcrdDBgdhOTRh'
   },
   {
     type: 'twitter',
-    link: '#'
+    link: 'https://twitter.com/swapmatic'
   },
   {
     type: 'instagram',
-    link: '#'
+    link: 'https://www.instagram.com/swapmatic/'
   },
   {
     type: 'medium',
-    link: '#'
+    link: 'https://medium.com/swapmatic'
+  },
+  {
+    type: 'discord',
+    link: 'https://discord.com/invite/k7NB4wc'
   }
 ]
 

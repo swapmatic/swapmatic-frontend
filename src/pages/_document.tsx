@@ -43,7 +43,6 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <script src="https://www.createmytoken.com/scripts/embed.js" async />
           <meta charSet="utf-8" />
           <meta name="description" content="SwapMatic" />
           <link

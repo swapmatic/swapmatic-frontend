@@ -3,7 +3,7 @@ import ImageNext from 'next/image'
 
 export const Container = styled.div`
   max-height: 6.25rem;
-  margin: 1rem;
+  margin: 1rem 2rem;
 
   & > div {
     filter: saturate(0);

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 // External libs
 import { useWeb3React } from '@web3-react/core'
 
@@ -25,42 +24,44 @@ const Header: React.FC = () => {
   const [isMenuToggle, setIsMenuToggle] = useState(false)
 
   const { setAttemptConnect, status, attemptConnect } = useStatus()
-  const { active, account, activate, deactivate } =
-    useWeb3React()
+  const { active, account, activate, deactivate } = useWeb3React()
 
-    interface ITextButtomObj {text: string | null | undefined, colorVariant: keyof typeof colorsVariants}
+  interface ITextButtomObj {
+    text: string | null | undefined
+    colorVariant: keyof typeof colorsVariants
+  }
 
-    interface ITextButton {
-      'notconnected': ITextButtomObj
-      'connected': ITextButtomObj
-      'connecting': ITextButtomObj
-      'wrongnetwork': ITextButtomObj
-    }
+  interface ITextButton {
+    notconnected: ITextButtomObj
+    connected: ITextButtomObj
+    connecting: ITextButtomObj
+    wrongnetwork: ITextButtomObj
+  }
 
-    const textButton: ITextButton = {
-      notconnected: { text: 'Connect Wallet', colorVariant: 'primaryReverse' },
-      connected: { text: account, colorVariant: 'primary' },
-      connecting: { text: 'Connecting...', colorVariant: 'warning' },
-      wrongnetwork: { text: 'Wrong Network', colorVariant: 'danger' }
-    }
+  const textButton: ITextButton = {
+    notconnected: { text: 'Connect Wallet', colorVariant: 'primaryReverse' },
+    connected: { text: account, colorVariant: 'primary' },
+    connecting: { text: 'Connecting...', colorVariant: 'warning' },
+    wrongnetwork: { text: 'Wrong Network', colorVariant: 'danger' }
+  }
 
-    async function connect() {
-      try {
-        if (active) {
-          deactivate()
-        } else {
-          if (!attemptConnect) {
-            setAttemptConnect(true)
-            await activate(injected)
-            setAttemptConnect(false)
-          }
+  async function connect() {
+    try {
+      if (active) {
+        deactivate()
+      } else {
+        if (!attemptConnect) {
+          setAttemptConnect(true)
+          await activate(injected)
+          setAttemptConnect(false)
         }
-      } catch (err) {
-        console.log(err)
       }
+    } catch (err) {
+      console.log(err)
     }
+  }
 
-    return (
+  return (
     <Styled.Container>
       <Wrapper>
         <Styled.Content>
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
         </Styled.Content>
       </Wrapper>
     </Styled.Container>
-    )
+  )
 }
 
 export default Header

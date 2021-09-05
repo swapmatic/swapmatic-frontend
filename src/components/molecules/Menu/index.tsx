@@ -46,7 +46,7 @@ const links = [
   {
     type: 'Anchor',
     title: 'Partners',
-    href: '/home#partners'
+    href: '/#partners'
   },
   {
     type: 'Anchor',
@@ -55,8 +55,13 @@ const links = [
   },
   {
     type: 'Anchor',
+    title: 'Staking',
+    href: '/staking'
+  },
+  {
+    type: 'Anchor',
     title: 'SWAM price',
-    href: '/pools'
+    href: '/#token'
   }
 ]
 

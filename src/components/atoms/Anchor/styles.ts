@@ -6,6 +6,7 @@ export const Container = styled.a<IAnchorProps>`
   margin-right: ${props => props.marginRight || 'inherit'};
   margin-bottom: ${props => props.marginBottom || 'inherit'};
   margin-left: ${props => props.marginLeft || 'inherit'};
+  color: ${props => props.color || 'inherit'};
   transition: all 0.5s;
   text-decoration: none;
 

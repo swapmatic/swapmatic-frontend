@@ -26,12 +26,12 @@ const PoolItems: React.FC = () => {
 
   const getPools = async (wallet: string | null | undefined) => {
     const response = await axios.get(`/api/pools/${wallet}`)
-    console.warn(wallet)
     setPools(response.data)
   }
 
   useEffect(() => {
     getPools(account)
+    setInterval(function() { getPools(account) }, 300000)
   }, [account])
 
   return (
