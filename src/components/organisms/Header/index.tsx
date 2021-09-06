@@ -9,6 +9,7 @@ import Logo from '@/components/atoms/Logo'
 import Wrapper from '@/components/atoms/Wrapper'
 import Button from '@/components/atoms/Button'
 import { colorsVariants } from '@/components/atoms/Button/styles'
+import PendingTotal from '@/components/molecules/PendingTotal'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -74,6 +75,7 @@ const Header: React.FC = () => {
             <div />
             <div />
           </Styled.MenuToggleButton>
+          <PendingTotal />
           <Button
             marginLeft="auto"
             sizeVariant="small"

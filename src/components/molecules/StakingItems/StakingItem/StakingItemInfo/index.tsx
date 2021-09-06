@@ -14,15 +14,23 @@ import * as Styled from './styles'
 interface IPoolItemInfoProps {
   title: string
   info: string
+  color?: 'green' | 'white'
 }
 
-const PoolItemInfo: React.FC<IPoolItemInfoProps> = ({ title, info }) => {
+const PoolItemInfo: React.FC<IPoolItemInfoProps> = ({ title, info, color }) => {
   return (
     <Styled.Container>
       <Typography marginBottom="0.1rem" as="body4">
         {title}
       </Typography>
-      <Typography as="body2">{info}</Typography>
+      <Typography
+        color={
+          color === 'green' ? 'var(--color-success)' : 'var(--color-white)'
+        }
+        as="body2"
+      >
+        {info}
+      </Typography>
     </Styled.Container>
   )
 }

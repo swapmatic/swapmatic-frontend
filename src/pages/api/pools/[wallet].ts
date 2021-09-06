@@ -61,6 +61,7 @@ export default async function handler(
         LEFT OUTER JOIN user_shares AS t2
           ON t1.pool_name = t2.pool_name
           AND t1.pool_type = t2.pool_type
+          AND t1.active = 1
           AND t2.holder_address = '${wallet}'
       `)
         return res.json(results)

@@ -57,11 +57,6 @@ const links = [
     type: 'Anchor',
     title: 'Staking',
     href: '/staking'
-  },
-  {
-    type: 'Anchor',
-    title: 'SWAM price',
-    href: '/#token'
   }
 ]
 

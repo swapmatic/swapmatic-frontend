@@ -68,6 +68,11 @@ const PoolItem: React.FC<IStakingItemProps> = ({ stakingItem }) => {
       <PoolItemInfo title="APR" info={`${String(0.25 * 100)}%`} />
       <PoolItemInfo
         title="Pending"
+        color={
+          stakingItem.holderPending && stakingItem.holderPending > 0
+            ? 'green'
+            : 'white'
+        }
         info={
           stakingItem.holderPending
             ? String(stakingItem.holderPending.toFixed(2)) + ' SWAM'
