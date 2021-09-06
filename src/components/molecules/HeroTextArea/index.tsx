@@ -29,7 +29,7 @@ const HeroTextArea: React.FC = () => {
         </Typography>
         <Column>
           <form
-            action="https://app.swapmatic.io/staking/"
+            action="https://v2.swapmatic.io/#/matic/swap"
             target="_blank"
             method="get"
           >

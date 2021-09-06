@@ -20,7 +20,8 @@ export const Content = styled.div`
   height: 100%;
   padding: 0 1rem;
 
-  & > button:last-child {
+  & > button:last-child,
+  & > div {
     ${mq({ display: ['none', 'block'] })}
   }
 `

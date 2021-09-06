@@ -67,6 +67,11 @@ const PoolItem: React.FC<IPoolItemProps> = ({ poolItem }) => {
       <PoolItemInfo title="APR" info={`${String(poolItem.apr * 100)}%`} />
       <PoolItemInfo
         title="Pending"
+        color={
+          poolItem.pendingRewardsSwam && poolItem.pendingRewardsSwam > 0
+            ? 'green'
+            : 'white'
+        }
         info={`${String(
           poolItem.pendingRewardsSwam === null
             ? 0

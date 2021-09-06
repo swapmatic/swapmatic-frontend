@@ -66,8 +66,8 @@ export const colorsVariants = {
 export const sizesVariants = {
   small: css`
     height: 1.8rem;
-    width: 7.5rem;
-    font-size: 0.8rem;
+    width: 8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 0 0.3rem;
   `,
