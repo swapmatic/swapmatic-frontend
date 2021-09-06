@@ -24,7 +24,7 @@ const appList = [
     title: 'SWAM Staking',
     description:
       'Stake your SWAM tokens for 25% APR + your share of aggregation revenue.',
-    link: '#',
+    link: '/staking',
     newPage: false
   },
   {
