@@ -3,34 +3,38 @@
 // Assets
 
 // Componentes
-import TopicItems from '@/components/molecules/TopicItems'
 import Wrapper from '@/components/atoms/Wrapper'
+import VideoList from '@/components/molecules/VideoList'
 import Typography from '@/components/atoms/Typography'
 
 // Subcomponentes and style
 import * as Styled from './styles'
+import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 
 // Services
 
 // Types
 
-const Topics: React.FC = () => {
+const Videos: React.FC = () => {
   return (
-    <Styled.Container id="token">
+    <Styled.Container id="apps">
+      <CircleAbsolute size="200px" top="20%" left="0%" />
       <Wrapper>
         <Styled.Content>
           <Typography
             as="heading1"
             align="center"
-            marginTop="8rem"
-            marginBottom="4rem"
+            marginTop="0rem"
+            marginBottom="3rem"
             data-aos="fade-left"
-          ></Typography>
-          <TopicItems />
+          >
+            Introduction
+          </Typography>
+          <VideoList />
         </Styled.Content>
       </Wrapper>
     </Styled.Container>
   )
 }
 
-export default Topics
+export default Videos

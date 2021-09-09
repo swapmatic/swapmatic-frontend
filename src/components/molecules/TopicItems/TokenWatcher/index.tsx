@@ -75,7 +75,7 @@ const TokenWatcher: React.FC = () => {
   }
 
   return (
-    <Styled.Container id="token">
+    <Styled.Container>
       <Styled.Content>
         <Styled.ImgContent>
           <Image
