@@ -38,29 +38,40 @@ export default async function handler(
     if (req.method === 'GET') {
       try {
         const results = await query(`
-    SELECT * FROM ((SELECT  t1.id as id,
-                            t1.project_name as projectName,
-                            t1.pool_type as poolType,
-                            t1.pool_name as poolName,
-                            (SELECT total FROM staking_total) as poolBalance,
-                            t1.holder_address as holderAddress,
-                            t1.holder_balance as holderBalance,
-                            t1.holder_share as holderShare,
-                            t1.active as active,
-                            t1.timestamped as timeStamped
-                    FROM staking as t1 WHERE t1.holder_address = '${wallet}' AND t1.active = 1 )
-                      UNION
-                    (SELECT t2.id,
-                            t2.projectName,
-                            t2.poolType,
-                            t2.poolName,
-                            t2.poolBalance,
-                            'undefined' as holderAddress,
-                            t2.holderBalance,
-                            t2.holderShare,
-                            t2.active,
-                            t2.timeStamped
-                      FROM staking_view as t2)) as t3
+        SELECT * FROM ((SELECT  t1.id as id,
+          t1.project_name as projectName,
+          t1.pool_type as poolType,
+          t1.pool_name as poolName,
+          (SELECT total FROM staking_total) as poolBalance,
+          t1.holder_address as holderAddress,
+          t1.holder_balance as holderBalance,
+          t1.holder_share as holderShare,
+          t1.active as active,
+          t1.timestamped as timeStamped
+      FROM staking as t1 WHERE t1.holder_address = '${wallet}' AND t1.active = 1 )
+        UNION
+      (SELECT t2.id,
+          t2.projectName,
+          t2.poolType,
+          t2.poolName,
+          t2.poolBalance,
+          'undefined' as holderAddress,
+          t2.holderBalance,
+          t2.holderShare,
+          t2.active,
+          t2.timeStamped
+         FROM staking_view as t2
+                WHERE NOT EXISTS (SELECT  t1.id as id,
+          t1.project_name as projectName,
+          t1.pool_type as poolType,
+          t1.pool_name as poolName,
+          (SELECT total FROM staking_total) as poolBalance,
+          t1.holder_address as holderAddress,
+          t1.holder_balance as holderBalance,
+          t1.holder_share as holderShare,
+          t1.active as active,
+          t1.timestamped as timeStamped
+         FROM staking as t1 WHERE t1.holder_address = '${wallet}' AND t1.active = 1 ))) as t3;
       `)
         return res.json(results)
       } catch (e) {
