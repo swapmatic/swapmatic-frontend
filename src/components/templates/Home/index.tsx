@@ -5,6 +5,7 @@
 // Componentes
 import Header from '@/components/organisms/Header'
 import Hero from '@/components/organisms/Hero'
+import Videos from '@/components/organisms/Video'
 import BestPrice from '@/components/organisms/BestPrice'
 import Apps from '@/components/organisms/Apps'
 import RoadMap from '@/components/organisms/RoadMap'
@@ -26,6 +27,7 @@ const Home: React.FC = () => {
       <Mist />
       <Header />
       <Hero />
+      <Videos />
       <BestPrice />
       <Apps />
       <RoadMap />

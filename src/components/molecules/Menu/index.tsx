@@ -35,21 +35,6 @@ const links = [
   },
   {
     type: 'Anchor',
-    title: 'Roadmap',
-    href: '/#roadmap'
-  },
-  /* {
-    type: 'Anchor',
-    title: 'Team',
-    href: '/#team'
-  }, */
-  {
-    type: 'Anchor',
-    title: 'Partners',
-    href: '/#partners'
-  },
-  {
-    type: 'Anchor',
     title: 'Farming',
     href: '/pools'
   },
@@ -57,7 +42,22 @@ const links = [
     type: 'Anchor',
     title: 'Staking',
     href: '/staking'
+  },
+  {
+    type: 'Anchor',
+    title: 'Roadmap',
+    href: '/#roadmap'
+  },
+  {
+    type: 'Anchor',
+    title: 'Info',
+    href: '/#token'
   }
+  /* {
+    type: 'Anchor',
+    title: 'Team',
+    href: '/#team'
+  }, */
 ]
 
 const Menu: React.FC<IMenuProps> = ({ isMenuToggle, setIsMenuToggle }) => {
