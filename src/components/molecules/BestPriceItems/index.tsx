@@ -21,7 +21,7 @@ const bestPriceItemsList = [
     image: PolygonImg,
     link: 'https://v2.swapmatic.io/#/matic/swap',
     description:
-      'SushiSwap, QuickSwap, ComethSwap, Dfyn, mStable, Curve, DODO, WaultSwap, Polydex,  ... and counting!'
+      'SushiSwap, QuickSwap, ComethSwap, Dfyn, mStable, Curve, DODO, WaultSwap, Polydex, ApeSwap, FirebirdOneSwap, Balancer, KyberDMM, ... and counting!'
   },
   {
     title: 'Mainnet',

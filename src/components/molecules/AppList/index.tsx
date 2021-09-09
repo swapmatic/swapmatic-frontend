@@ -33,6 +33,13 @@ const appList = [
       'Provide liquidity in SWAM pools and earn 100% or more APR, guaranteed.',
     link: '/pools',
     newPage: false
+  },
+  {
+    title: 'Swapdog.io',
+    description:
+      'Original SwapMatic system and pools now guarded by Swapdog. SWAM farming available.',
+    link: 'https://swapdog.io/swap',
+    newPage: true
   } /*,
   {
     title: 'SWAM Universe',
