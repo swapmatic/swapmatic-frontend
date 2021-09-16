@@ -17,7 +17,7 @@ import CircleAbsolute from '@/components/atoms/CircleAbsolute'
 
 const Videos: React.FC = () => {
   return (
-    <Styled.Container id="apps">
+    <Styled.Container id="intro">
       <CircleAbsolute size="200px" top="20%" left="0%" />
       <Wrapper>
         <Styled.Content>
