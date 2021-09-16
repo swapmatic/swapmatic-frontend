@@ -40,6 +40,13 @@ const appList = [
       'Original SwapMatic system and pools now guarded by Swapdog. SWAM farming available.',
     link: 'https://swapdog.io/swap',
     newPage: true
+  },
+  {
+    title: 'Token List',
+    description:
+      'Use standard SwapMatic token list in Polygon AMMs such as QuickSwap, Dfyn, or SushiSwap to have all your favorite tokens included.',
+    link: 'https://tokenlists.org/token-list?url=https://raw.githubusercontent.com/BlockTimeWorld/SwapMatic/master/swapmatic.tokenlist.json',
+    newPage: true
   } /*,
   {
     title: 'SWAM Universe',

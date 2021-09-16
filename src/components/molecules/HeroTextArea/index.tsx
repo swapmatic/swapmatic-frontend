@@ -41,9 +41,15 @@ const HeroTextArea: React.FC = () => {
               Launch APP
             </Button>
           </form>
-          {/* <Button colorVariant="white" sizeVariant="medium">
-            White Paper
-  </Button> */}
+          <form
+            action="https://t.me/joinchat/bOKzcrdDBgdhOTRh"
+            target="_blank"
+            method="get"
+          >
+            <Button colorVariant="white" sizeVariant="medium">
+              Token Sale
+            </Button>
+          </form>
         </Column>
       </Styled.HeadingArea>
       <Styled.PoweredArea>
