@@ -5,6 +5,7 @@ import ImageAbsolute from '@/components/atoms/ImageAbsolute'
 import superSwapImg from '../../../assets/imgs/super_swap.webp'
 
 // Componentes
+import Count from '@/components/molecules/Count'
 
 // Subcomponentes and style
 import * as Styled from './styles'
@@ -31,6 +32,7 @@ const SuperSwap: React.FC = () => {
           zIndex: 1
         }}
       />
+      <Count />
     </Styled.Container>
   )
 }
