@@ -5,7 +5,6 @@
 // Componentes
 
 // Subcomponentes and style
-import Typography from '@/components/atoms/Typography'
 import { useEffect, useState } from 'react'
 import * as Styled from './styles'
 import Flip from './Flip'
@@ -44,15 +43,14 @@ const Count: React.FC = () => {
     setInterval(() => {
       getDiference()
     }, 1000)
-  }, [])
+  }, [getDiference])
 
   return (
     <Styled.Container>
-      <Typography
-        as="heading2"
-        align="center"
-      >{`${days} Days ${hours} Hours ${minutes} Minutes and ${seconds} Seconds`}</Typography>
-      <Flip timer={seconds} />
+      <Flip title={'Days'} timer={days || 0} />
+      <Flip title={'Hours'} timer={hours || 0} />
+      <Flip title={'Minutes'} timer={minutes || 0} />
+      <Flip title={'Seconds'} timer={seconds || 0} />
     </Styled.Container>
   )
 }

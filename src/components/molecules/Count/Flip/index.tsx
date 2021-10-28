@@ -11,17 +11,29 @@ import * as Styled from './styles'
 // Services
 
 // Types
-interface IFlipProps {
-  timer?: number
+export interface IFlipProps {
+  timer: number
+  title: string
 }
 
-const Flip: React.FC<IFlipProps> = ({ timer }) => {
+const Flip: React.FC<IFlipProps> = ({ timer, title }) => {
+  const clock = timer < 10 ? `0${timer}` : timer
+
   return (
-    <Styled.Container className="flip-animation">
-      <Typography as="heading1">{timer}</Typography>
-      <Styled.FlipContainer>
-        <div></div>
-        <div></div>
+    <Styled.Container>
+      <Typography marginBottom="1rem" as="heading3">
+        {title}
+      </Typography>
+      <Styled.FlipContainer timer={timer}>
+        <div>
+          <Typography as="heading1">{clock}</Typography>
+        </div>
+        <div>
+          <Typography as="heading1">{clock}</Typography>
+        </div>
+        <div>
+          <Typography as="heading1">{clock}</Typography>
+        </div>
         <div />
       </Styled.FlipContainer>
     </Styled.Container>

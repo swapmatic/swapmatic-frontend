@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  & > div {
+  & > div:first-child {
     width: 100%;
     max-width: 1200px;
   }
