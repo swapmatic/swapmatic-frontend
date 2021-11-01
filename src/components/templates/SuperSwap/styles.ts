@@ -5,8 +5,11 @@ export const Container = styled.div`
   width: 100%;
   background-color: #12131c;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-  & > div {
+  & > div:first-child {
     width: 100%;
     max-width: 1200px;
   }
