@@ -47,7 +47,7 @@ const HeroTextArea: React.FC = () => {
             method="get"
           >
             <Button colorVariant="white" sizeVariant="medium">
-              Token Sale
+              Community
             </Button>
           </form>
         </Column>
