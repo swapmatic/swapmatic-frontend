@@ -51,6 +51,26 @@ const roadMapItemsList = [
     description:
       '6-2021 SwapMatic aggregator launched in Polygon, BSC, and Mainnet. Universal token lists are introduced.',
     status: true
+  },
+  {
+    description: '12-2021 Partnership with Unifarm, cohort #32 launched',
+    status: true
+  },
+  {
+    description: '1-2022 Avalanche Chain added',
+    status: true
+  },
+  {
+    description: '2-2022 Fantom Chain added',
+    status: true
+  },
+  {
+    description: '2-2022 Unifarm cohort #35 launched',
+    status: true
+  },
+  {
+    description: '3-2022 Optimism is added',
+    status: true
   }
 ]
 
